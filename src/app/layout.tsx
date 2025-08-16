@@ -4,7 +4,7 @@ import { Toaster } from '@/components/ui/toaster';
 import { GameProvider } from '@/contexts/game-context';
 
 export const metadata: Metadata = {
-  title: 'TablaTime',
+  title: 'Loteria',
   description: 'A modern way to play the classic Loteria game.',
 };
 

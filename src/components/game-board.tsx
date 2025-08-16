@@ -134,7 +134,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
           {boards.map((board, index) => (
             <Card key={index} className="bg-card/80 backdrop-blur-sm">
               <CardHeader>
-                <CardTitle className="text-center">{t.board} {index + 1}</CardTitle>
+                <CardTitle className="text-center">{t.carton} {index + 1}</CardTitle>
               </CardHeader>
               <CardContent>
                 <Carton

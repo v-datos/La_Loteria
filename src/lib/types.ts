@@ -24,7 +24,7 @@ export type Translations = {
     line: string;
     fullBoard: string;
     winCondition: string;
-    howManyBoards: string;
+    howManyCartons: string;
     marking: string;
     automatic: string;
     manual: string;
@@ -34,12 +34,14 @@ export type Translations = {
     congratulations: string;
     youWon: string;
     playAgain: string;
-    board: string;
+    carton: string;
     caller: string;
     waitingForPlayer: string;
     calling: string;
     language: string;
     english: string;
     spanish: string;
+    yourName: string;
+    generateAvatar: string;
   };
 };
