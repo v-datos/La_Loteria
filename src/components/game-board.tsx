@@ -110,8 +110,8 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   }, [markedCardIds, boards, settings.winCondition, onWin]);
 
   return (
-    <div className="w-full flex flex-col items-center gap-6">
-      <div className="w-full max-w-5xl flex flex-col md:flex-row justify-between items-center gap-4">
+    <div className="w-full flex flex-col items-center gap-4">
+      <div className="w-full max-w-7xl flex flex-col md:flex-row justify-between items-start gap-4 px-4">
         <div className="flex flex-col items-center gap-2">
             <h2 className="text-2xl font-bold">{t.caller}</h2>
             <CallerCard card={currentCard} />
@@ -130,13 +130,13 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
       </div>
       
       <div className="w-full flex justify-center">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
           {boards.map((board, index) => (
-            <Card key={index} className="bg-card/80 backdrop-blur-sm">
-              <CardHeader>
-                <CardTitle className="text-center">{t.carton} {index + 1}</CardTitle>
+            <Card key={index} className="bg-card/80 backdrop-blur-sm max-w-[300px]">
+              <CardHeader className="p-2">
+                <CardTitle className="text-center text-lg">{t.carton} {index + 1}</CardTitle>
               </CardHeader>
-              <CardContent>
+              <CardContent className="p-2">
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}
