@@ -8,10 +8,17 @@ export default {
     './src/app/**/*.{js,ts,jsx,tsx,mdx}',
   ],
   theme: {
+    container: {
+      center: true,
+      padding: '2rem',
+      screens: {
+        '2xl': '1400px',
+      },
+    },
     extend: {
       fontFamily: {
-        body: ['Inter', 'sans-serif'],
-        headline: ['Inter', 'sans-serif'],
+        body: ['Literata', 'serif'],
+        headline: ['Literata', 'serif'],
         code: ['monospace'],
       },
       colors: {
@@ -88,10 +95,25 @@ export default {
             height: '0',
           },
         },
+        'card-flip': {
+          '0%': { transform: 'rotateY(0deg)' },
+          '100%': { transform: 'rotateY(180deg)' },
+        },
+        'card-reveal': {
+          '0%': { transform: 'rotateY(-180deg) scale(0.8)', opacity: '0' },
+          '100%': { transform: 'rotateY(0deg) scale(1)', opacity: '1' },
+        },
+        'confetti-fall': {
+          '0%': { transform: 'translateY(-100vh) rotateZ(0deg)' },
+          '100%': { transform: 'translateY(100vh) rotateZ(360deg)' },
+        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
+        'card-flip': 'card-flip 0.6s ease-in-out forwards',
+        'card-reveal': 'card-reveal 0.6s ease-in-out forwards',
+        'confetti-fall': 'confetti-fall linear forwards',
       },
     },
   },

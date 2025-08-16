@@ -1,0 +1,100 @@
+'use client';
+
+import { useState } from 'react';
+import type { GameSettings } from '@/lib/types';
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
+import { Label } from '@/components/ui/label';
+import { RadioGroup, RadioGroupItem } from '@/components/ui/radio-group';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Switch } from '@/components/ui/switch';
+import { useGame } from '@/contexts/game-context';
+import LanguageToggle from './language-toggle';
+
+interface GameSettingsProps {
+  onStartGame: (settings: GameSettings) => void;
+}
+
+export default function GameSettingsComponent({ onStartGame }: GameSettingsProps) {
+  const [settings, setSettings] = useState<GameSettings>({
+    winCondition: 'line',
+    boardCount: 1,
+    autoMark: true,
+  });
+
+  const { t } = useGame();
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    onStartGame(settings);
+  };
+
+  return (
+    <div className="w-full max-w-md">
+       <Card className="bg-card/80 backdrop-blur-sm border-2 border-amber-800/20 shadow-2xl shadow-amber-900/20">
+        <CardHeader className="text-center">
+          <div className="flex justify-end absolute top-4 right-4">
+            <LanguageToggle />
+          </div>
+          <h1 className="text-5xl font-bold font-headline text-amber-900/80 drop-shadow-sm">TablaTime</h1>
+          <CardDescription className="text-lg">{t.appName}</CardDescription>
+        </CardHeader>
+        <form onSubmit={handleSubmit}>
+          <CardContent className="space-y-6">
+            <div className="space-y-2">
+              <Label className="text-lg">{t.winCondition}</Label>
+              <RadioGroup
+                value={settings.winCondition}
+                onValueChange={(value) => setSettings({ ...settings, winCondition: value as 'line' | 'full' })}
+                className="flex gap-4"
+              >
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="line" id="line" />
+                  <Label htmlFor="line">{t.line}</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="full" id="full" />
+                  <Label htmlFor="full">{t.fullBoard}</Label>
+                </div>
+              </RadioGroup>
+            </div>
+            <div className="space-y-2">
+              <Label htmlFor="board-count" className="text-lg">{t.howManyBoards}</Label>
+              <Select
+                value={String(settings.boardCount)}
+                onValueChange={(value) => setSettings({ ...settings, boardCount: Number(value) })}
+              >
+                <SelectTrigger id="board-count">
+                  <SelectValue placeholder="Select number of boards" />
+                </SelectTrigger>
+                <SelectContent>
+                  {[1, 2, 3, 4].map((num) => (
+                    <SelectItem key={num} value={String(num)}>
+                      {num}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </div>
+            <div className="flex items-center justify-between">
+              <Label className="text-lg">{t.marking}</Label>
+              <div className="flex items-center gap-4">
+                <span>{t.manual}</span>
+                <Switch
+                  checked={settings.autoMark}
+                  onCheckedChange={(checked) => setSettings({ ...settings, autoMark: checked })}
+                />
+                <span>{t.automatic}</span>
+              </div>
+            </div>
+          </CardContent>
+          <CardFooter>
+            <Button type="submit" size="lg" className="w-full text-xl py-6 bg-accent hover:bg-accent/90 text-accent-foreground">
+              {t.play}
+            </Button>
+          </CardFooter>
+        </form>
+       </Card>
+    </div>
+  );
+}
