@@ -25,6 +25,9 @@ export const translations: Translations = {
     spanish: 'Spanish',
     yourName: 'Your Name',
     generateAvatar: 'Generate Avatar',
+    calledCards: 'Called Cards',
+    remaining: 'Remaining',
+    of: 'of',
   },
   es: {
     appName: 'Lotería',
@@ -36,7 +39,7 @@ export const translations: Translations = {
     automatic: 'Automático',
     manual: 'Manual',
     play: '¡Jugar!',
-    nextCard: 'Siguiente Carta',
+    nextCard: 'Siguiente Ficha',
     restartGame: 'Reiniciar Juego',
     congratulations: '¡Felicidades!',
     youWon: 'Ganaste con el cartón',
@@ -50,5 +53,8 @@ export const translations: Translations = {
     spanish: 'Español',
     yourName: 'Tu Nombre',
     generateAvatar: 'Generar Avatar',
+    calledCards: 'Fichas Cantadas',
+    remaining: 'Restantes',
+    of: 'de',
   },
 };

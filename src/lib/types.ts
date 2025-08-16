@@ -43,5 +43,8 @@ export type Translations = {
     spanish: string;
     yourName: string;
     generateAvatar: string;
+    calledCards: string;
+    remaining: string;
+    of: string;
   };
 };

@@ -54,8 +54,8 @@ export default function CallerCard({ card }: CallerCardProps) {
         </div>
         
         {/* Card Back */}
-        <div className="absolute w-full h-full backface-hidden flex items-center justify-center p-4 rounded-lg shadow-lg border-4 border-amber-900/50 bg-amber-800/90" style={{ transform: 'rotateY(180deg)' }}>
-           <h2 className="text-4xl font-bold text-white transform -scale-x-100">Lotería</h2>
+        <div className="absolute w-full h-full backface-hidden flex items-center justify-center p-4 rounded-lg shadow-lg border-4 border-amber-900/50 bg-cover bg-center" style={{ transform: 'rotateY(180deg)', backgroundImage: 'url(/card-back.svg)' }}>
+           <h2 className="text-4xl font-bold text-white transform -scale-x-100" style={{ textShadow: '2px 2px 4px rgba(0,0,0,0.5)'}}>Lotería</h2>
         </div>
       </div>
     </div>
