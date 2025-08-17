@@ -91,7 +91,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                   value={playerName}
                   onChange={(e) => setPlayerName(e.target.value)}
                   placeholder={t.language === 'es' ? 'ej., Luisa' : 'e.g., Luisa'}
-                  className="rounded-xl h-12 text-2xl font-body tracking-wider"
+                  className="rounded-xl h-12 text-3xl font-body tracking-wider"
                 />
               </div>
               <Button onClick={handleGenerateAvatar} disabled={!playerName || isGenerating} type="button" className="rounded-xl h-12 text-lg">
