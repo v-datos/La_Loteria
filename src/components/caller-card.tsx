@@ -13,18 +13,20 @@ interface CallerCardProps {
 export default function CallerCard({ card }: CallerCardProps) {
   const { t, language } = useGame();
   const [isFlipped, setIsFlipped] = useState(false);
-  const [prevCard, setPrevCard] = useState<LoteriaCard | null>(null);
+  const [displayCard, setDisplayCard] = useState<LoteriaCard | null>(null);
 
   useEffect(() => {
-    if (card && card !== prevCard) {
-      setIsFlipped(true);
+    if (card) {
+      setIsFlipped(true); // Start the flip
       const timer = setTimeout(() => {
-        setIsFlipped(false);
-        setPrevCard(card);
-      }, 700);
+        setDisplayCard(card); // Change the card content midway through the flip
+        setIsFlipped(false); // Flip back to show the front
+      }, 350); // Half of the animation duration
       return () => clearTimeout(timer);
+    } else {
+        setDisplayCard(null); // Clear the card when the game restarts
     }
-  }, [card, prevCard]);
+  }, [card]);
 
 
   return (
@@ -35,12 +37,12 @@ export default function CallerCard({ card }: CallerCardProps) {
       >
         {/* Card Front */}
         <div className="absolute w-full h-full backface-hidden flex flex-col items-center justify-center p-2 rounded-lg shadow-lg border-4 border-amber-900/50 bg-amber-700/80">
-          {card ? (
+          {displayCard ? (
             <>
               <Image
-                src={card.image}
-                alt={language === 'es' ? card.name.es : card.name.en}
-                data-ai-hint={card.dataAiHint}
+                src={displayCard.image}
+                alt={language === 'es' ? displayCard.name.es : displayCard.name.en}
+                data-ai-hint={displayCard.dataAiHint}
                 width={200}
                 height={300}
                 className="w-full h-full object-cover rounded-md border-2 border-amber-800/50"
