@@ -67,7 +67,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
       setDeck(prev => prev.slice(0, -1));
       setCurrentCard(nextCard);
       setCalledCards(prev => [...prev, nextCard]);
-      setIsCalling(false);
+      setTimeout(() => setIsCalling(false), 2000); // Add a 2-second cooldown
     };
 
     try {
@@ -77,12 +77,12 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
       console.error('AI Caller failed:', error);
       toast({
         title: 'Error',
-        description: 'Could not fetch card audio.',
+        description: 'Could not fetch card audio. Please wait a moment and try again.',
         variant: 'destructive',
       });
-      processNextCard();
+      setIsCalling(false); // Allow user to retry
     }
-  }, [deck, isCalling, playAudio, toast, settings.autoMark]);
+  }, [deck, isCalling, playAudio, toast]);
   
   const handleMarkCard = (cardId: number) => {
     const isCalled = calledCards.some(c => c.id === cardId);
