@@ -1,7 +1,5 @@
 import type { LoteriaCard } from './types';
 
-const BASE_URL = 'https://placehold.co/200x300.png';
-
 const fichas = [
     { es: 'abanico', en: 'Fan', hint: 'hand fan' },
     { es: 'acha', en: 'Axe', hint: 'axe' },
@@ -96,6 +94,6 @@ const uniqueFichas = fichas.reduce((acc, current) => {
 export const LOTERIA_CARDS: LoteriaCard[] = uniqueFichas.slice(0, 80).map((ficha, index) => ({
   id: index + 1,
   name: { en: ficha.en, es: ficha.es },
-  image: BASE_URL,
+  image: `https://placehold.co/200x300.png?text=${ficha.es.replace(/\s/g, '+')}`,
   dataAiHint: ficha.hint,
 }));
