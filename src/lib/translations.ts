@@ -11,7 +11,7 @@ export const translations: Translations = {
     marking: 'Marking',
     automatic: 'Automatic',
     manual: 'Manual',
-    play: 'Play!',
+    play: 'Start Playing',
     nextCard: 'Next Card',
     restartGame: 'Restart Game',
     congratulations: 'Congratulations!',
@@ -30,6 +30,7 @@ export const translations: Translations = {
     remaining: 'Remaining',
     of: 'of',
     calledCard: 'Called Card',
+    marked: 'marked',
   },
   es: {
     appName: 'Lotería',
@@ -41,7 +42,7 @@ export const translations: Translations = {
     marking: 'Marcado',
     automatic: 'Automático',
     manual: 'Manual',
-    play: '¡Jugar!',
+    play: 'Comenzar a Jugar',
     nextCard: 'Siguiente Ficha',
     restartGame: 'Reiniciar Juego',
     congratulations: '¡Felicidades!',
@@ -60,5 +61,6 @@ export const translations: Translations = {
     remaining: 'Restantes',
     of: 'de',
     calledCard: 'Ficha Llamada',
+    marked: 'marcados',
   },
 };

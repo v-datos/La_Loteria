@@ -48,5 +48,6 @@ export type Translations = {
     remaining: string;
     of: string;
     calledCard: string;
+    marked: string;
   };
 };

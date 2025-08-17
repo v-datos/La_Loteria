@@ -116,7 +116,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                   <SelectValue placeholder="Select number of boards" />
                 </SelectTrigger>
                 <SelectContent>
-                  {[1, 2].map((num) => (
+                  {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
                     <SelectItem key={num} value={String(num)}>
                       {num}
                     </SelectItem>

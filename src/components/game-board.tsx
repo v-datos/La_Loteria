@@ -8,7 +8,6 @@ import Carton from './carton';
 import CallerCard from './caller-card';
 import CalledCards from './called-cards';
 import { useGame } from '@/contexts/game-context';
-import { aiCaller } from '@/ai/flows/ai-caller';
 import { useToast } from '@/hooks/use-toast';
 import { Loader2 } from 'lucide-react';
 import { LOTERIA_CARDS } from '@/lib/loteria-cards';
@@ -86,6 +85,10 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
       }
     });
   }, [markedCardIds, boards, settings.winCondition, onWin]);
+  
+  const getMarkedCountForBoard = (board: LoteriaCard[]) => {
+    return board.filter(card => markedCardIds.has(card.id)).length;
+  };
 
   return (
     <div className="w-full h-screen flex flex-col items-center gap-2 p-4">
@@ -114,7 +117,15 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
           <div className="flex-grow flex flex-wrap justify-center items-center gap-4 content-center">
             {boards.map((board, index) => (
               <div key={index} className="flex flex-col items-center gap-1 max-w-[280px]">
-                <h3 className="font-bold text-lg">{t.carton} {index + 1}</h3>
+                <div className="w-full flex justify-between items-center px-1">
+                  <h3 className="font-bold text-lg">{t.carton} {index + 1}</h3>
+                  <div className="flex items-center gap-1.5">
+                    <span className="flex items-center justify-center bg-primary text-primary-foreground font-bold rounded-full h-6 w-6 text-sm">
+                      {getMarkedCountForBoard(board)}
+                    </span>
+                    <span className="text-sm text-muted-foreground">{t.marked}</span>
+                  </div>
+                </div>
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}
