@@ -115,9 +115,9 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 h-full">
-          <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center items-center gap-8 content-center">
+          <div className="flex-grow flex flex-wrap justify-center items-center content-center gap-8">
             {boards.map((board, index) => (
-              <div key={index} className="w-full max-w-[300px]">
+              <div key={index} className="w-full max-w-xs flex-shrink-0">
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}

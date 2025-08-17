@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Amatic SC', 'cursive'],
+        body: ['Bowlby One SC', 'cursive'],
         headline: ['Luckiest Guy', 'cursive'],
         code: ['monospace'],
       },
