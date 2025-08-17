@@ -21,6 +21,7 @@ export type Language = 'en' | 'es';
 export type Translations = {
   [key in Language]: {
     appName: string;
+    subtitle: string;
     line: string;
     fullBoard: string;
     winCondition: string;

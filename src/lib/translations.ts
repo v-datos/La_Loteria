@@ -3,6 +3,7 @@ import type { Translations } from './types';
 export const translations: Translations = {
   en: {
     appName: 'Loteria',
+    subtitle: 'by Aunt Luisa',
     line: 'Line',
     fullBoard: 'Full Carton',
     winCondition: 'Win Condition',
@@ -31,6 +32,7 @@ export const translations: Translations = {
   },
   es: {
     appName: 'Lotería',
+    subtitle: 'de Tía Luisa',
     line: 'Línea',
     fullBoard: 'Tabla Llena',
     winCondition: 'Condición para Ganar',

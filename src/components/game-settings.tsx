@@ -63,8 +63,8 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
           <div className="flex justify-end absolute top-4 right-4">
             <LanguageToggle />
           </div>
-          <h1 className="text-5xl font-bold font-headline text-amber-900/80 drop-shadow-sm">Lotería</h1>
-          <CardDescription className="text-lg">{t.appName}</CardDescription>
+          <h1 className="text-5xl font-bold font-headline text-amber-900/80 drop-shadow-sm">{t.appName}</h1>
+          <CardDescription className="text-lg">{t.subtitle}</CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent className="space-y-6">

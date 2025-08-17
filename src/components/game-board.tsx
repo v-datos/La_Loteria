@@ -4,7 +4,6 @@ import { useState, useEffect, useCallback, useMemo } from 'react';
 import type { GameSettings, LoteriaCard } from '@/lib/types';
 import { generateBoards, createShuffledDeck, checkWin } from '@/lib/game-logic';
 import { Button } from '@/components/ui/button';
-import { Card, CardHeader, CardTitle, CardContent } from '@/components/ui/card';
 import Carton from './carton';
 import CallerCard from './caller-card';
 import CalledCards from './called-cards';
