@@ -56,7 +56,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
 
   return (
     <div className="w-full max-w-md">
-       <Card className="bg-card/80 backdrop-blur-sm border-2 border-amber-800/20 shadow-2xl shadow-amber-900/20">
+       <Card className="bg-card/80 backdrop-blur-sm border-4 border-primary/80 shadow-2xl shadow-amber-900/20">
         <CardHeader className="text-center">
           <div className="flex justify-end absolute top-4 right-4">
             <LanguageToggle />
