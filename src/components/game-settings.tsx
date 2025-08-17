@@ -77,7 +77,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                 </Avatar>
               </div>
               <div className="flex-grow space-y-2">
-                <Label htmlFor="name" className="text-3xl font-body tracking-wider -rotate-1">{t.yourName}</Label>
+                <Label htmlFor="name" className="text-3xl font-body font-bold tracking-wider -rotate-1">{t.yourName}</Label>
                 <Input
                   id="name"
                   value={playerName}
@@ -92,7 +92,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             </div>
 
             <div className="space-y-3">
-              <Label className="text-3xl font-body tracking-wider -rotate-1">{t.winCondition}</Label>
+              <Label className="text-3xl font-body font-bold tracking-wider -rotate-1">{t.winCondition}</Label>
               <RadioGroup
                 value={settings.winCondition}
                 onValueChange={(value) => setSettings({ ...settings, winCondition: value as 'line' | 'full' | 'corners' })}
@@ -113,7 +113,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
               </RadioGroup>
             </div>
             <div className="space-y-3">
-              <Label htmlFor="board-count" className="text-3xl font-body tracking-wider -rotate-1">{t.howManyCartons}</Label>
+              <Label htmlFor="board-count" className="text-3xl font-body font-bold tracking-wider -rotate-1">{t.howManyCartons}</Label>
               <Select
                 value={String(settings.boardCount)}
                 onValueChange={(value) => setSettings({ ...settings, boardCount: Number(value) })}
@@ -131,7 +131,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
               </Select>
             </div>
             <div className="space-y-3">
-              <Label className="text-3xl font-body tracking-wider -rotate-1">{t.marking}</Label>
+              <Label className="text-3xl font-body font-bold tracking-wider -rotate-1">{t.marking}</Label>
               <div className="flex items-center justify-between rounded-xl border-2 border-primary/20 bg-muted/50 p-2 h-12">
                 <span className="px-2 text-2xl font-body tracking-wider">{t.manual}</span>
                 <Switch
