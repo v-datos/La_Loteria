@@ -15,7 +15,7 @@ export function generateBoards(count: number): LoteriaCard[][] {
   const boards: LoteriaCard[][] = [];
   for (let i = 0; i < count; i++) {
     const shuffledCards = shuffle(LOTERIA_CARDS);
-    boards.push(shuffledCards.slice(0, 16));
+    boards.push(shuffledCards.slice(0, 8));
   }
   return boards;
 }
@@ -29,18 +29,18 @@ const winningPatterns = {
     // Rows
     [0, 1, 2, 3],
     [4, 5, 6, 7],
-    [8, 9, 10, 11],
-    [12, 13, 14, 15],
     // Columns
-    [0, 4, 8, 12],
-    [1, 5, 9, 13],
-    [2, 6, 10, 14],
-    [3, 7, 11, 15],
+    [0, 4],
+    [1, 5],
+    [2, 6],
+    [3, 7],
     // Diagonals
-    [0, 5, 10, 15],
-    [3, 6, 9, 12],
+    [0, 5],
+    [1, 4],
+    [2, 7],
+    [3, 6],
   ],
-  full: [Array.from({ length: 16 }, (_, i) => i)],
+  full: [Array.from({ length: 8 }, (_, i) => i)],
 };
 
 export function checkWin(

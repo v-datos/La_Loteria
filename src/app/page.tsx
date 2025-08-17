@@ -5,6 +5,7 @@ import type { GameSettings } from '@/lib/types';
 import GameSettingsComponent from '@/components/game-settings';
 import GameBoard from '@/components/game-board';
 import WinScreen from '@/components/win-screen';
+import { useGame } from '@/contexts/game-context';
 
 export type GameState = 'settings' | 'playing' | 'win';
 

@@ -26,17 +26,15 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
     boardCount: 1,
     autoMark: true,
   });
-  const [name, setName] = useState('');
-  const [avatarUrl, setAvatarUrl] = useState('');
   const [isGenerating, setIsGenerating] = useState(false);
-  const { t } = useGame();
+  const { t, playerName, setPlayerName, avatarUrl, setAvatarUrl } = useGame();
   const { toast } = useToast();
 
   const handleGenerateAvatar = async () => {
-    if (!name) return;
+    if (!playerName) return;
     setIsGenerating(true);
     try {
-      const result = await generateAvatar({ name });
+      const result = await generateAvatar({ name: playerName });
       setAvatarUrl(result.avatarDataUri);
     } catch (error) {
       console.error('Avatar generation failed:', error);
@@ -71,7 +69,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             <div className="flex items-end gap-4">
               <div className="flex-shrink-0">
                 <Avatar className="h-20 w-20 border-2 border-primary">
-                  <AvatarImage src={avatarUrl} alt={name} />
+                  <AvatarImage src={avatarUrl} alt={playerName} />
                   <AvatarFallback>
                     <User className="h-10 w-10" />
                   </AvatarFallback>
@@ -81,12 +79,12 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                 <Label htmlFor="name" className="text-lg">{t.yourName}</Label>
                 <Input
                   id="name"
-                  value={name}
-                  onChange={(e) => setName(e.target.value)}
+                  value={playerName}
+                  onChange={(e) => setPlayerName(e.target.value)}
                   placeholder="e.g., Juan"
                 />
               </div>
-              <Button onClick={handleGenerateAvatar} disabled={!name || isGenerating} type="button">
+              <Button onClick={handleGenerateAvatar} disabled={!playerName || isGenerating} type="button">
                 {isGenerating ? <Loader2 className="animate-spin" /> : t.generateAvatar}
               </Button>
             </div>
@@ -118,7 +116,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                   <SelectValue placeholder="Select number of boards" />
                 </SelectTrigger>
                 <SelectContent>
-                  {[1, 2, 3, 4].map((num) => (
+                  {[1, 2].map((num) => (
                     <SelectItem key={num} value={String(num)}>
                       {num}
                     </SelectItem>

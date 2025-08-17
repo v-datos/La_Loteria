@@ -10,8 +10,10 @@ import CalledCards from './called-cards';
 import { useGame } from '@/contexts/game-context';
 import { aiCaller } from '@/ai/flows/ai-caller';
 import { useToast } from '@/hooks/use-toast';
-import { Loader2, Volume2, VolumeX } from 'lucide-react';
+import { Loader2 } from 'lucide-react';
 import { LOTERIA_CARDS } from '@/lib/loteria-cards';
+import { Avatar, AvatarFallback, AvatarImage } from './ui/avatar';
+import { User } from 'lucide-react';
 
 interface GameBoardProps {
   settings: GameSettings;
@@ -20,7 +22,7 @@ interface GameBoardProps {
 }
 
 export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps) {
-  const { t } = useGame();
+  const { t, playerName, avatarUrl } = useGame();
   const { toast } = useToast();
   const [boards, setBoards] = useState<LoteriaCard[][]>([]);
   const [deck, setDeck] = useState<LoteriaCard[]>([]);
@@ -28,7 +30,6 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   const [calledCards, setCalledCards] = useState<LoteriaCard[]>([]);
   const [markedCardIds, setMarkedCardIds] = useState<Set<number>>(new Set());
   const [isCalling, setIsCalling] = useState(false);
-  const [isSoundOn, setIsSoundOn] = useState(true);
 
   const audio = useMemo(() => typeof window !== 'undefined' ? new Audio() : null, []);
 
@@ -41,7 +42,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   }, [settings]);
 
   const playAudio = useCallback((mediaUrl: string, onEnded: () => void) => {
-    if (audio && isSoundOn) {
+    if (audio) {
       audio.src = mediaUrl;
       const playPromise = audio.play();
       if (playPromise !== undefined) {
@@ -55,7 +56,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
     } else {
       setTimeout(onEnded, 500);
     }
-  }, [audio, isSoundOn]);
+  }, [audio]);
 
   const handleNextCard = useCallback(async () => {
     if (deck.length === 0 || isCalling) return;
@@ -111,7 +112,6 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
     }
   }, [currentCard, settings.autoMark]);
 
-  const calledCardIds = useMemo(() => new Set(calledCards.map(c => c.id)), [calledCards]);
   useEffect(() => {
     boards.forEach((board, index) => {
       if (checkWin(board, markedCardIds, settings.winCondition)) {
@@ -122,14 +122,20 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
 
   return (
     <div className="w-full h-screen flex flex-col items-center gap-2 p-4">
-       <header className="w-full flex justify-between items-center px-4">
-        <h1 className="text-4xl font-bold font-headline text-amber-900/80 drop-shadow-sm">{t.appName}</h1>
-        <div className="flex items-center gap-2">
-            <Button onClick={onRestart} variant="outline">{t.restartGame}</Button>
-            <Button onClick={() => setIsSoundOn(!isSoundOn)} variant="ghost" size="icon">
-                {isSoundOn ? <Volume2/> : <VolumeX/>}
-            </Button>
+       <header className="w-full flex justify-between items-center px-4 relative h-20">
+        <div className="absolute left-4">
+          <Button onClick={onRestart} variant="outline">{t.restartGame}</Button>
         </div>
+        <div className="flex flex-col items-center justify-center absolute left-1/2 -translate-x-1/2">
+            <Avatar className="h-16 w-16 border-2 border-primary">
+              <AvatarImage src={avatarUrl} alt={playerName} />
+              <AvatarFallback>
+                <User className="h-8 w-8" />
+              </AvatarFallback>
+            </Avatar>
+            <h2 className="text-lg font-bold">{playerName}</h2>
+        </div>
+        <h1 className="text-4xl font-bold font-headline text-amber-900/80 drop-shadow-sm absolute right-4">{t.appName}</h1>
       </header>
       
       <main className="w-full flex-1 grid grid-cols-[250px_1fr_250px] items-start justify-center gap-4">
@@ -138,7 +144,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 h-full">
-          <div className="flex-grow flex flex-wrap justify-center items-center gap-2 content-center">
+          <div className="flex-grow flex flex-wrap justify-center items-center gap-4 content-center">
             {boards.map((board, index) => (
               <div key={index} className="flex flex-col items-center gap-1 max-w-[280px]">
                 <h3 className="font-bold text-lg">{t.carton} {index + 1}</h3>
