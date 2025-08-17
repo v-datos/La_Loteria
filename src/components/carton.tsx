@@ -12,7 +12,7 @@ interface CartonProps {
 }
 
 export default function Carton({ board, markedCardIds, onMark, isWinner }: CartonProps) {
-  const { t } = useGame();
+  const { t, language } = useGame();
   return (
     <div
       className={`p-1 bg-amber-700/80 rounded-lg shadow-lg border-2 border-amber-900/50 backdrop-blur-sm transition-all duration-500 ${isWinner ? 'shadow-yellow-400/80 scale-105' : 'shadow-black/30'}`}
@@ -31,21 +31,25 @@ export default function Carton({ board, markedCardIds, onMark, isWinner }: Carto
             >
               <Image
                 src={card.image}
-                alt={t.language === 'es' ? card.name.es : card.name.en}
+                alt={language === 'es' ? card.name.es : card.name.en}
                 data-ai-hint={card.dataAiHint}
-                width={100}
-                height={150}
+                width={80}
+                height={120}
                 className="w-full h-full object-cover border border-amber-800/50 rounded-sm"
                 priority
               />
-              <div className="absolute inset-0 bg-black/10"></div>
+               <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-0.5 text-center">
+                <p className="text-white text-xs font-semibold truncate">
+                  {language === 'es' ? card.name.es : card.name.en}
+                </p>
+              </div>
               {isMarked && (
                 <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
                   <Image
                     src="/bean.svg"
                     alt="Bean marker"
-                    width={50}
-                    height={50}
+                    width={40}
+                    height={40}
                     className="w-3/4 h-3/4 object-contain animate-in fade-in zoom-in-50 duration-500"
                   />
                 </div>

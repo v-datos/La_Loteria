@@ -82,7 +82,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
       });
       processNextCard();
     }
-  }, [deck, isCalling, playAudio, toast]);
+  }, [deck, isCalling, playAudio, toast, settings.autoMark]);
   
   const handleMarkCard = (cardId: number) => {
     const isCalled = calledCards.some(c => c.id === cardId);
@@ -121,39 +121,44 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   }, [markedCardIds, boards, settings.winCondition, onWin]);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center gap-4 p-4">
-      <header className="w-full flex justify-end">
-          <Button onClick={() => setIsSoundOn(!isSoundOn)} variant="ghost" size="icon">
-              {isSoundOn ? <Volume2/> : <VolumeX/>}
-          </Button>
+    <div className="w-full h-screen flex flex-col items-center gap-2 p-4">
+       <header className="w-full flex justify-between items-center px-4">
+        <h1 className="text-4xl font-bold font-headline text-amber-900/80 drop-shadow-sm">{t.appName}</h1>
+        <div className="flex items-center gap-2">
+            <Button onClick={onRestart} variant="outline">{t.restartGame}</Button>
+            <Button onClick={() => setIsSoundOn(!isSoundOn)} variant="ghost" size="icon">
+                {isSoundOn ? <Volume2/> : <VolumeX/>}
+            </Button>
+        </div>
       </header>
       
-      <main className="w-full flex-1 flex flex-col md:flex-row items-center justify-center gap-6">
-        <div className="flex flex-col items-center justify-center gap-4">
+      <main className="w-full flex-1 grid grid-cols-[250px_1fr_250px] items-start justify-center gap-4">
+        <div className="flex flex-col items-center justify-start h-full">
+            <CalledCards cards={calledCards} deckSize={LOTERIA_CARDS.length} />
+        </div>
+        
+        <div className="flex flex-col items-center justify-center gap-4 h-full">
+          <div className="flex-grow flex flex-wrap justify-center items-center gap-2 content-center">
+            {boards.map((board, index) => (
+              <div key={index} className="flex flex-col items-center gap-1 max-w-[280px]">
+                <h3 className="font-bold text-lg">{t.carton} {index + 1}</h3>
+                <Carton
+                  board={board}
+                  markedCardIds={markedCardIds}
+                  onMark={settings.autoMark ? undefined : handleMarkCard}
+                  isWinner={false} // This is handled by the win screen
+                />
+              </div>
+            ))}
+          </div>
+        </div>
+        
+        <div className="flex flex-col items-center justify-start gap-4 h-full">
             <CallerCard card={currentCard} />
             <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-48 h-12 text-lg">
                 {isCalling ? <Loader2 className="animate-spin" /> : t.nextCard}
             </Button>
-            <Button onClick={onRestart} variant="outline">{t.restartGame}</Button>
         </div>
-        
-        <div className="w-full flex-1 flex flex-wrap justify-center items-start gap-2 max-w-4xl">
-          {boards.map((board, index) => (
-            <div key={index} className="flex flex-col items-center gap-1">
-              <h3 className="font-bold text-lg">{t.carton} {index + 1}</h3>
-              <Carton
-                board={board}
-                markedCardIds={markedCardIds}
-                onMark={settings.autoMark ? undefined : handleMarkCard}
-                isWinner={false} // This is handled by the win screen
-              />
-            </div>
-          ))}
-        </div>
-        
-        <aside className="w-full md:w-64">
-           <CalledCards cards={calledCards} deckSize={LOTERIA_CARDS.length} />
-        </aside>
       </main>
     </div>
   );
