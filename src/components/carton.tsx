@@ -17,9 +17,9 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
   
   return (
     <div
-      className={`relative p-2 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-transparent'}`}
+      className={`relative p-2 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-primary'}`}
     >
-      <div className="absolute top-1.5 left-1.5 bg-background/80 rounded-full h-6 w-6 flex items-center justify-center border border-border text-foreground font-headline">
+      <div className="absolute top-1.5 left-1.5 bg-background/80 rounded-full h-6 w-6 flex items-center justify-center border border-border text-foreground font-headline z-10">
         {boardNumber}
       </div>
 

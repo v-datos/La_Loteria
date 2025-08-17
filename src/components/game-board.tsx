@@ -93,10 +93,10 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   }, [markedCardIds, boards, settings.winCondition, onWin]);
 
   return (
-    <div className="w-full h-screen flex flex-col items-center gap-2 p-4">
+    <div className="w-full h-screen flex flex-col items-center gap-2 p-4 kitchen-table-bg">
        <header className="w-full flex justify-between items-center px-4 relative h-20">
         <div className="absolute left-4">
-          <Button onClick={onRestart} variant="outline" className='text-xl tracking-wider font-body'>{t.restartGame}</Button>
+          <Button onClick={onRestart} variant="outline" className='text-xl tracking-wider font-body border-2 border-primary'>{t.restartGame}</Button>
         </div>
         <div className="flex flex-col items-center justify-center absolute left-1/2 -translate-x-1/2">
             <Avatar className="h-16 w-16 border-2 border-primary">
