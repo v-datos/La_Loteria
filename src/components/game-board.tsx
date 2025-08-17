@@ -99,9 +99,9 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
           <Button onClick={onRestart} variant="outline" className='text-xl tracking-wider font-body border-2 border-primary'>{t.restartGame}</Button>
         </div>
         <div className="flex flex-col items-center justify-center absolute left-1/2 -translate-x-1/2">
-            <Avatar className="h-16 w-16 border-2 border-primary">
+            <Avatar className="h-16 w-16 border-2 border-primary rounded-xl">
               <AvatarImage src={avatarUrl} alt={playerName} />
-              <AvatarFallback>
+              <AvatarFallback className="rounded-xl">
                 <User className="h-8 w-8" />
               </AvatarFallback>
             </Avatar>
@@ -115,9 +115,9 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 h-full">
-          <div className="flex-grow flex flex-wrap justify-center items-center content-center gap-8">
+          <div className="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 content-center">
             {boards.map((board, index) => (
-              <div key={index} className="w-full max-w-xs flex-shrink-0">
+              <div key={index} className="flex-shrink-0">
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}
@@ -135,7 +135,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
               <h3 className='text-3xl font-body tracking-wider font-bold -rotate-2'>{t.calledCard}</h3>
               <CallerCard card={currentCard} />
             </div>
-            <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-48 h-12 text-2xl font-body tracking-wider">
+            <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-full max-w-xs h-12 text-2xl font-body tracking-wider px-4">
                 {isCalling ? <Loader2 className="animate-spin" /> : t.nextCard}
             </Button>
         </div>
