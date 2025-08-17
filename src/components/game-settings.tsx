@@ -52,6 +52,14 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
+    if (!playerName.trim()) {
+      toast({
+        title: t.language === 'es' ? '¡Espera!' : 'Hold on!',
+        description: t.language === 'es' ? 'Por favor, ingresa tu nombre para comenzar.' : 'Please enter your name to start.',
+        variant: "destructive"
+      });
+      return;
+    }
     onStartGame(settings);
   };
 
@@ -143,7 +151,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             </div>
           </CardContent>
           <CardFooter className="px-8 pt-8 pb-8">
-            <Button type="submit" size="lg" className="w-full text-3xl py-8 rounded-2xl bg-accent hover:bg-accent/90 text-accent-foreground">
+            <Button type="submit" size="lg" className="w-full text-3xl py-8 rounded-2xl bg-accent hover:bg-accent/90 text-accent-foreground" disabled={!playerName.trim()}>
               {t.play}
             </Button>
           </CardFooter>
