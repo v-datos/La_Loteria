@@ -115,7 +115,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 h-full">
-          <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center items-center gap-4 content-center">
+          <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center items-center gap-8 content-center">
             {boards.map((board, index) => (
               <div key={index} className="w-full max-w-[300px]">
                 <Carton
@@ -132,7 +132,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         
         <div className="flex flex-col items-center justify-start gap-4 h-full">
             <div className='flex flex-col items-center gap-2'>
-              <h3 className='text-3xl font-body tracking-wider font-bold'>{t.calledCard}</h3>
+              <h3 className='text-3xl font-body tracking-wider font-bold -rotate-2'>{t.calledCard}</h3>
               <CallerCard card={currentCard} />
             </div>
             <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-48 h-12 text-2xl font-body tracking-wider">

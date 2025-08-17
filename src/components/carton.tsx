@@ -16,51 +16,53 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
   const { t, language } = useGame();
   
   return (
-    <div
-      className={`relative p-2 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-primary'}`}
-    >
-      <div className="absolute top-1.5 left-1.5 bg-background/80 rounded-full h-6 w-6 flex items-center justify-center border border-border text-foreground font-headline z-10">
-        {boardNumber}
-      </div>
+    <div className="relative">
+        <div className="absolute -top-3 -left-2 bg-background/80 rounded-full h-8 w-8 flex items-center justify-center border-2 border-primary text-foreground font-headline z-10 -rotate-12">
+            {boardNumber}
+        </div>
+        <div
+        className={`relative p-2 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-primary'}`}
+        >
 
-      <div className="grid grid-cols-4 grid-rows-2 gap-2 mt-4">
-        {board.map((card) => {
-          const isMarked = markedCardIds.has(card.id);
-          return (
-            <div
-              key={card.id}
-              onClick={() => onMark?.(card.id)}
-              className={`relative aspect-[3/4] rounded-md overflow-hidden transition-all duration-300 transform hover:scale-105 ${onMark ? 'cursor-pointer' : ''} ${isMarked ? 'opacity-90' : 'opacity-100'}`}
-            >
-              <Image
-                src={card.image}
-                alt={language === 'es' ? card.name.es : card.name.en}
-                data-ai-hint={card.dataAiHint}
-                width={80}
-                height={120}
-                className="w-full h-full object-cover border border-amber-800/50 rounded-md"
-                priority
-              />
-               <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-0.5 text-center">
-                <p className="text-white text-base font-bold tracking-wider truncate">
-                  {language === 'es' ? card.name.es : card.name.en}
-                </p>
-              </div>
-              {isMarked && (
-                <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
-                  <Image
-                    src="/bean.svg"
-                    alt="Bean marker"
-                    width={40}
-                    height={40}
-                    className="w-2/3 h-2/3 object-contain animate-in fade-in zoom-in-50 duration-500"
-                  />
+        <div className="grid grid-cols-4 grid-rows-2 gap-2">
+            {board.map((card) => {
+            const isMarked = markedCardIds.has(card.id);
+            return (
+                <div
+                key={card.id}
+                onClick={() => onMark?.(card.id)}
+                className={`relative aspect-[3/4] rounded-md overflow-hidden transition-all duration-300 transform hover:scale-105 ${onMark ? 'cursor-pointer' : ''} ${isMarked ? 'opacity-90' : 'opacity-100'}`}
+                >
+                <Image
+                    src={card.image}
+                    alt={language === 'es' ? card.name.es : card.name.en}
+                    data-ai-hint={card.dataAiHint}
+                    width={80}
+                    height={120}
+                    className="w-full h-full object-cover border border-amber-800/50 rounded-md"
+                    priority
+                />
+                <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-0.5 text-center">
+                    <p className="text-white text-base font-bold tracking-wider truncate">
+                    {language === 'es' ? card.name.es : card.name.en}
+                    </p>
                 </div>
-              )}
-            </div>
-          );
-        })}
-      </div>
+                {isMarked && (
+                    <div className="absolute inset-0 flex items-center justify-center bg-black/30 backdrop-blur-sm">
+                    <Image
+                        src="/bean.svg"
+                        alt="Bean marker"
+                        width={40}
+                        height={40}
+                        className="w-2/3 h-2/3 object-contain animate-in fade-in zoom-in-50 duration-500"
+                    />
+                    </div>
+                )}
+                </div>
+            );
+            })}
+        </div>
+        </div>
     </div>
   );
 }
