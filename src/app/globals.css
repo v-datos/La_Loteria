@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Sevillana', cursive;
+  font-family: 'Amatic SC', cursive;
   background-image: url(https://www.transparenttextures.com/patterns/paper.png);
 }
 

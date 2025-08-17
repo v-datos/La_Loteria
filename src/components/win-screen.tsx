@@ -21,12 +21,12 @@ export default function WinScreen({ winnerBoard, onPlayAgain }: WinScreenProps) 
           <CardTitle className="text-6xl font-headline text-primary drop-shadow-lg -rotate-3">{t.congratulations}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-3xl font-body">
+          <p className="text-5xl font-body tracking-wider">
             {t.youWon} {winnerBoard}!
           </p>
         </CardContent>
         <CardFooter>
-          <Button onClick={onPlayAgain} size="lg" className="w-full text-2xl py-6 bg-accent hover:bg-accent/90 text-accent-foreground font-headline">
+          <Button onClick={onPlayAgain} size="lg" className="w-full text-3xl py-6 bg-accent hover:bg-accent/90 text-accent-foreground">
             {t.playAgain}
           </Button>
         </CardFooter>

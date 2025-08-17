@@ -46,7 +46,7 @@ export default function CallerCard({ card }: CallerCardProps) {
               />
             </>
           ) : (
-             <p className="font-bold text-center text-white">{t.waitingForPlayer}</p>
+             <p className="font-bold text-center text-white text-3xl font-body tracking-wider">{t.waitingForPlayer}</p>
           )}
         </div>
         

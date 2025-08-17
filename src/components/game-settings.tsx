@@ -63,7 +63,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             <LanguageToggle />
           </div>
           <h1 className="text-6xl font-headline text-amber-900/80 drop-shadow-sm -rotate-2">{t.appName}</h1>
-          <CardDescription className="text-2xl font-body">{t.subtitle}</CardDescription>
+          <CardDescription className="text-4xl tracking-wider font-body">{t.subtitle}</CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent className="space-y-8 px-8">
@@ -77,22 +77,22 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                 </Avatar>
               </div>
               <div className="flex-grow space-y-2">
-                <Label htmlFor="name" className="text-lg font-headline">{t.yourName}</Label>
+                <Label htmlFor="name" className="text-3xl font-body tracking-wider">{t.yourName}</Label>
                 <Input
                   id="name"
                   value={playerName}
                   onChange={(e) => setPlayerName(e.target.value)}
                   placeholder={t.language === 'es' ? 'ej., Luisa' : 'e.g., Luisa'}
-                  className="rounded-xl h-12 text-base"
+                  className="rounded-xl h-12 text-2xl font-body tracking-wider"
                 />
               </div>
-              <Button onClick={handleGenerateAvatar} disabled={!playerName || isGenerating} type="button" className="rounded-xl h-12 font-headline">
+              <Button onClick={handleGenerateAvatar} disabled={!playerName || isGenerating} type="button" className="rounded-xl h-12 text-lg">
                 {isGenerating ? <Loader2 className="animate-spin" /> : t.generateAvatar}
               </Button>
             </div>
 
             <div className="space-y-3">
-              <Label className="text-lg font-headline">{t.winCondition}</Label>
+              <Label className="text-3xl font-body tracking-wider">{t.winCondition}</Label>
               <RadioGroup
                 value={settings.winCondition}
                 onValueChange={(value) => setSettings({ ...settings, winCondition: value as 'line' | 'full' | 'corners' })}
@@ -100,30 +100,30 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
               >
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="line" id="line" />
-                  <Label htmlFor="line" className="text-lg">{t.line}</Label>
+                  <Label htmlFor="line" className="text-2xl font-body tracking-wider">{t.line}</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="corners" id="corners" />
-                  <Label htmlFor="corners" className="text-lg">{t.corners}</Label>
+                  <Label htmlFor="corners" className="text-2xl font-body tracking-wider">{t.corners}</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="full" id="full" />
-                  <Label htmlFor="full" className="text-lg">{t.fullBoard}</Label>
+                  <Label htmlFor="full" className="text-2xl font-body tracking-wider">{t.fullBoard}</Label>
                 </div>
               </RadioGroup>
             </div>
             <div className="space-y-3">
-              <Label htmlFor="board-count" className="text-lg font-headline">{t.howManyCartons}</Label>
+              <Label htmlFor="board-count" className="text-3xl font-body tracking-wider">{t.howManyCartons}</Label>
               <Select
                 value={String(settings.boardCount)}
                 onValueChange={(value) => setSettings({ ...settings, boardCount: Number(value) })}
               >
-                <SelectTrigger id="board-count" className="h-12 rounded-xl border-2 border-primary text-base">
+                <SelectTrigger id="board-count" className="h-12 rounded-xl border-2 border-primary text-2xl font-body tracking-wider">
                   <SelectValue placeholder="Select number of boards" />
                 </SelectTrigger>
                 <SelectContent>
                   {[1, 2, 3, 4, 5, 6, 7, 8].map((num) => (
-                    <SelectItem key={num} value={String(num)} className="text-lg">
+                    <SelectItem key={num} value={String(num)} className="text-2xl font-body tracking-wider">
                       {num}
                     </SelectItem>
                   ))}
@@ -131,19 +131,19 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
               </Select>
             </div>
             <div className="space-y-3">
-              <Label className="text-lg font-headline">{t.marking}</Label>
+              <Label className="text-3xl font-body tracking-wider">{t.marking}</Label>
               <div className="flex items-center justify-between rounded-xl border-2 border-primary/20 bg-muted/50 p-2 h-12">
-                <span className="px-2 text-lg">{t.manual}</span>
+                <span className="px-2 text-2xl font-body tracking-wider">{t.manual}</span>
                 <Switch
                   checked={settings.autoMark}
                   onCheckedChange={(checked) => setSettings({ ...settings, autoMark: checked })}
                 />
-                <span className="px-2 text-lg">{t.automatic}</span>
+                <span className="px-2 text-2xl font-body tracking-wider">{t.automatic}</span>
               </div>
             </div>
           </CardContent>
           <CardFooter className="px-8 pt-8 pb-8">
-            <Button type="submit" size="lg" className="w-full text-2xl py-8 rounded-2xl bg-accent hover:bg-accent/90 text-accent-foreground font-headline">
+            <Button type="submit" size="lg" className="w-full text-3xl py-8 rounded-2xl bg-accent hover:bg-accent/90 text-accent-foreground">
               {t.play}
             </Button>
           </CardFooter>

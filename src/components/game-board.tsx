@@ -96,7 +96,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
     <div className="w-full h-screen flex flex-col items-center gap-2 p-4">
        <header className="w-full flex justify-between items-center px-4 relative h-20">
         <div className="absolute left-4">
-          <Button onClick={onRestart} variant="outline">{t.restartGame}</Button>
+          <Button onClick={onRestart} variant="outline" className='text-xl tracking-wider font-body'>{t.restartGame}</Button>
         </div>
         <div className="flex flex-col items-center justify-center absolute left-1/2 -translate-x-1/2">
             <Avatar className="h-16 w-16 border-2 border-primary">
@@ -105,7 +105,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
                 <User className="h-8 w-8" />
               </AvatarFallback>
             </Avatar>
-            <h2 className="text-lg font-bold">{playerName}</h2>
+            <h2 className="text-2xl font-bold font-body tracking-wider">{playerName}</h2>
         </div>
       </header>
       
@@ -132,10 +132,10 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         
         <div className="flex flex-col items-center justify-start gap-4 h-full">
             <div className='flex flex-col items-center gap-2'>
-              <h3 className='text-2xl font-bold'>{t.calledCard}</h3>
+              <h3 className='text-3xl font-body tracking-wider font-bold'>{t.calledCard}</h3>
               <CallerCard card={currentCard} />
             </div>
-            <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-48 h-12 text-lg">
+            <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-48 h-12 text-2xl font-body tracking-wider">
                 {isCalling ? <Loader2 className="animate-spin" /> : t.nextCard}
             </Button>
         </div>

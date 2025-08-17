@@ -18,8 +18,8 @@ export default function CalledCards({ cards, deckSize }: CalledCardsProps) {
   return (
     <Card className="h-full flex flex-col bg-card/80 backdrop-blur-sm">
       <CardHeader className="p-4">
-        <CardTitle className="text-center text-xl">{t.calledCards}</CardTitle>
-        <p className="text-center text-sm text-muted-foreground">
+        <CardTitle className="text-center text-3xl font-body tracking-wider">{t.calledCards}</CardTitle>
+        <p className="text-center text-xl font-body tracking-wider text-muted-foreground">
           {cards.length} {t.of} {deckSize} ({remainingCount} {t.remaining})
         </p>
       </CardHeader>

@@ -19,7 +19,7 @@ export default function LanguageToggle() {
       aria-label={`Switch to ${language === 'en' ? 'Spanish' : 'English'}`}
     >
       <Globe className="h-5 w-5" />
-      <span>{language === 'en' ? t.spanish : t.english}</span>
+      <span className='font-body text-2xl tracking-wider'>{language === 'en' ? t.spanish : t.english}</span>
     </Button>
   );
 }
