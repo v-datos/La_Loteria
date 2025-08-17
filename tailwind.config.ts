@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Bowlby One SC', 'cursive'],
+        body: ['Caveat', 'cursive'],
         headline: ['Luckiest Guy', 'cursive'],
         code: ['monospace'],
       },
