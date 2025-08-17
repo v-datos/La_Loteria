@@ -1,3 +1,4 @@
+
 'use client';
 
 import Image from 'next/image';
@@ -10,19 +11,28 @@ interface CallerCardProps {
 }
 
 export default function CallerCard({ card }: CallerCardProps) {
-  const { t } = useGame();
+  const { t, language } = useGame();
   const [isFlipped, setIsFlipped] = useState(false);
-  const [displayCard, setDisplayCard] = useState<LoteriaCard | null>(card);
+  const [displayCard, setDisplayCard] = useState<LoteriaCard | null>(null);
 
   useEffect(() => {
     if (card) {
-      setIsFlipped(true);
-      setTimeout(() => {
+      if (displayCard === null) {
+        // First card, just show it without flipping
         setDisplayCard(card);
-        setIsFlipped(false);
-      }, 300); // half of the animation duration
+      } else {
+        // Subsequent cards, do the flip animation
+        setIsFlipped(true);
+        setTimeout(() => {
+          setDisplayCard(card);
+          setIsFlipped(false);
+        }, 300); // half of the animation duration
+      }
+    } else {
+      // Reset when game restarts
+      setDisplayCard(null);
     }
-  }, [card]);
+  }, [card, displayCard]);
 
 
   return (
@@ -37,7 +47,7 @@ export default function CallerCard({ card }: CallerCardProps) {
             <>
               <Image
                 src={displayCard.image}
-                alt={t.language === 'es' ? displayCard.name.es : displayCard.name.en}
+                alt={language === 'es' ? displayCard.name.es : displayCard.name.en}
                 data-ai-hint={displayCard.dataAiHint}
                 width={200}
                 height={300}
