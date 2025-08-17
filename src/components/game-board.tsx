@@ -118,11 +118,11 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
               <div key={index} className="flex flex-col items-center gap-1 max-w-[280px]">
                 <div className="w-full flex justify-between items-center px-1">
                   <h3 className="font-bold text-lg">{t.carton} {index + 1}</h3>
-                  <div className="flex items-center gap-1.5">
+                  <div className="flex items-center gap-2 bg-muted p-1 rounded-md border">
                     <span className="flex items-center justify-center bg-primary text-primary-foreground font-bold rounded-full h-6 w-6 text-sm">
                       {getMarkedCountForBoard(board)}
                     </span>
-                    <span className="text-sm text-muted-foreground">{t.marked}</span>
+                    <span className="text-sm text-muted-foreground pr-1">{t.marked}</span>
                   </div>
                 </div>
                 <Carton
