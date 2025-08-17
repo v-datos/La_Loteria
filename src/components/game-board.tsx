@@ -31,7 +31,6 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   const [markedCardIds, setMarkedCardIds] = useState<Set<number>>(new Set());
   const [isCalling, setIsCalling] = useState(false);
 
-  const audio = useMemo(() => typeof window !== 'undefined' ? new Audio() : null, []);
 
   useEffect(() => {
     setBoards(generateBoards(settings.boardCount));
@@ -41,49 +40,17 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
     setMarkedCardIds(new Set());
   }, [settings]);
 
-  const playAudio = useCallback((mediaUrl: string, onEnded: () => void) => {
-    if (audio) {
-      audio.src = mediaUrl;
-      const playPromise = audio.play();
-      if (playPromise !== undefined) {
-        playPromise.then(() => {
-          audio.onended = onEnded;
-        }).catch(error => {
-          console.error("Audio play failed", error);
-          onEnded(); 
-        });
-      }
-    } else {
-      setTimeout(onEnded, 500);
-    }
-  }, [audio]);
-
   const handleNextCard = useCallback(async () => {
     if (deck.length === 0 || isCalling) return;
 
     setIsCalling(true);
     const nextCard = deck[deck.length - 1];
     
-    const processNextCard = () => {
-      setDeck(prev => prev.slice(0, -1));
-      setCurrentCard(nextCard);
-      setCalledCards(prev => [...prev, nextCard]);
-      setTimeout(() => setIsCalling(false), 2000); // Add a 2-second cooldown
-    };
-
-    try {
-      const result = await aiCaller({ cardName: nextCard.name.es });
-      playAudio(result.media, processNextCard);
-    } catch (error) {
-      console.error('AI Caller failed:', error);
-      toast({
-        title: 'Error',
-        description: 'Could not fetch card audio. Please wait a moment and try again.',
-        variant: 'destructive',
-      });
-      setIsCalling(false); // Allow user to retry
-    }
-  }, [deck, isCalling, playAudio, toast]);
+    setDeck(prev => prev.slice(0, -1));
+    setCurrentCard(nextCard);
+    setCalledCards(prev => [...prev, nextCard]);
+    setTimeout(() => setIsCalling(false), 500); // Add a cooldown
+  }, [deck, isCalling, toast]);
   
   const handleMarkCard = (cardId: number) => {
     const isCalled = calledCards.some(c => c.id === cardId);
@@ -160,7 +127,10 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-start gap-4 h-full">
-            <CallerCard card={currentCard} />
+            <div className='flex flex-col items-center gap-2'>
+              <h3 className='text-2xl font-bold'>{t.calledCard}</h3>
+              <CallerCard card={currentCard} />
+            </div>
             <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-48 h-12 text-lg">
                 {isCalling ? <Loader2 className="animate-spin" /> : t.nextCard}
             </Button>

@@ -29,6 +29,7 @@ export const translations: Translations = {
     calledCards: 'Called Cards',
     remaining: 'Remaining',
     of: 'of',
+    calledCard: 'Called Card',
   },
   es: {
     appName: 'Lotería',
@@ -58,5 +59,6 @@ export const translations: Translations = {
     calledCards: 'Fichas Cantadas',
     remaining: 'Restantes',
     of: 'de',
+    calledCard: 'Ficha Llamada',
   },
 };

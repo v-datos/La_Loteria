@@ -41,12 +41,9 @@ export default function CallerCard({ card }: CallerCardProps) {
                 data-ai-hint={displayCard.dataAiHint}
                 width={200}
                 height={300}
-                className="w-full h-auto object-contain rounded-md border-2 border-amber-800/50"
+                className="w-full h-full object-cover rounded-md border-2 border-amber-800/50"
                 priority
               />
-              <p className="mt-2 font-bold text-center text-white text-shadow-sm truncate w-full">
-                {t.language === 'es' ? displayCard.name.es : displayCard.name.en}
-              </p>
             </>
           ) : (
              <p className="font-bold text-center text-white">{t.waitingForPlayer}</p>

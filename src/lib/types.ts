@@ -47,5 +47,6 @@ export type Translations = {
     calledCards: string;
     remaining: string;
     of: string;
+    calledCard: string;
   };
 };
