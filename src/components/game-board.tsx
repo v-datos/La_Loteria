@@ -21,7 +21,7 @@ interface GameBoardProps {
 }
 
 export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps) {
-  const { t, playerName, avatarUrl } = useGame();
+  const { t, playerName, avatarUrl, language } = useGame();
   const { toast } = useToast();
   const [boards, setBoards] = useState<LoteriaCard[][]>([]);
   const [deck, setDeck] = useState<LoteriaCard[]>([]);
@@ -29,6 +29,8 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   const [calledCards, setCalledCards] = useState<LoteriaCard[]>([]);
   const [markedCardIds, setMarkedCardIds] = useState<Set<number>>(new Set());
   const [isCalling, setIsCalling] = useState(false);
+  const [audio, setAudio] = useState<HTMLAudioElement | null>(null);
+  const [isAiCallerEnabled, setIsAiCallerEnabled] = useState(false);
 
 
   useEffect(() => {
@@ -48,8 +50,12 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
     setDeck(prev => prev.slice(0, -1));
     setCurrentCard(nextCard);
     setCalledCards(prev => [...prev, nextCard]);
-    setTimeout(() => setIsCalling(false), 500); // Add a cooldown
-  }, [deck, isCalling, toast]);
+
+    setTimeout(() => {
+      setIsCalling(false);
+    }, 700);
+
+  }, [deck, isCalling, isAiCallerEnabled, language, toast]);
   
   const handleMarkCard = (cardId: number) => {
     const isCalled = calledCards.some(c => c.id === cardId);
@@ -85,10 +91,6 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
       }
     });
   }, [markedCardIds, boards, settings.winCondition, onWin]);
-  
-  const getMarkedCountForBoard = (board: LoteriaCard[]) => {
-    return board.filter(card => markedCardIds.has(card.id)).length;
-  };
 
   return (
     <div className="w-full h-screen flex flex-col items-center gap-2 p-4">
@@ -113,23 +115,15 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 h-full">
-          <div className="flex-grow flex flex-wrap justify-center items-center gap-4 content-center">
+          <div className="flex-grow grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 justify-items-center items-center gap-4 content-center">
             {boards.map((board, index) => (
-              <div key={index} className="flex flex-col items-center gap-1 max-w-[280px]">
-                <div className="w-full flex justify-between items-center px-1">
-                  <h3 className="font-bold text-lg">{t.carton} {index + 1}</h3>
-                  <div className="flex items-center gap-2 bg-muted p-1 rounded-md border">
-                    <span className="flex items-center justify-center bg-primary text-primary-foreground font-bold rounded-full h-6 w-6 text-sm">
-                      {getMarkedCountForBoard(board)}
-                    </span>
-                    <span className="text-sm text-muted-foreground pr-1">{t.marked}</span>
-                  </div>
-                </div>
+              <div key={index} className="w-full max-w-[300px]">
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}
                   onMark={settings.autoMark ? undefined : handleMarkCard}
                   isWinner={false}
+                  boardNumber={index + 1}
                 />
               </div>
             ))}

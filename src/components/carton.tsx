@@ -3,31 +3,43 @@
 import Image from 'next/image';
 import type { LoteriaCard } from '@/lib/types';
 import { useGame } from '@/contexts/game-context';
+import { Progress } from './ui/progress';
 
 interface CartonProps {
   board: LoteriaCard[];
   markedCardIds: Set<number>;
   onMark?: (cardId: number) => void;
   isWinner: boolean;
+  boardNumber: number;
 }
 
-export default function Carton({ board, markedCardIds, onMark, isWinner }: CartonProps) {
+export default function Carton({ board, markedCardIds, onMark, isWinner, boardNumber }: CartonProps) {
   const { t, language } = useGame();
+  const markedCount = board.filter(card => markedCardIds.has(card.id)).length;
+  const progressValue = (markedCount / 8) * 100;
+
   return (
     <div
-      className={`p-1 bg-amber-700/80 rounded-lg shadow-lg border-2 border-primary backdrop-blur-sm transition-all duration-500 ${isWinner ? 'shadow-yellow-400/80 scale-105' : 'shadow-black/30'}`}
-      style={{
-        backgroundImage: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23a0522d\' fill-opacity=\'0.1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-      }}
+      className={`p-4 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-transparent'}`}
     >
-      <div className="grid grid-cols-4 grid-rows-2 gap-1">
+        <div className="flex justify-between items-center px-1">
+            <h3 className="font-bold text-lg">{t.carton} {boardNumber}</h3>
+            <div className="flex items-center gap-2">
+            <span className="flex items-center justify-center bg-primary text-primary-foreground font-bold rounded-full h-6 w-6 text-sm">
+                {markedCount}
+            </span>
+            <span className="text-sm text-muted-foreground pr-1">{t.marked}</span>
+            </div>
+        </div>
+
+      <div className="grid grid-cols-4 grid-rows-2 gap-2">
         {board.map((card) => {
           const isMarked = markedCardIds.has(card.id);
           return (
             <div
               key={card.id}
               onClick={() => onMark?.(card.id)}
-              className={`relative aspect-[3/4] rounded-sm overflow-hidden transition-all duration-300 transform hover:scale-105 ${onMark ? 'cursor-pointer' : ''} ${isMarked ? 'opacity-90' : 'opacity-100'}`}
+              className={`relative aspect-[3/4] rounded-md overflow-hidden transition-all duration-300 transform hover:scale-105 ${onMark ? 'cursor-pointer' : ''} ${isMarked ? 'opacity-90' : 'opacity-100'}`}
             >
               <Image
                 src={card.image}
@@ -35,11 +47,11 @@ export default function Carton({ board, markedCardIds, onMark, isWinner }: Carto
                 data-ai-hint={card.dataAiHint}
                 width={80}
                 height={120}
-                className="w-full h-full object-cover border border-amber-800/50 rounded-sm"
+                className="w-full h-full object-cover border border-amber-800/50 rounded-md"
                 priority
               />
                <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-0.5 text-center">
-                <p className="text-white text-xs font-semibold truncate">
+                <p className="text-white text-[10px] font-semibold truncate">
                   {language === 'es' ? card.name.es : card.name.en}
                 </p>
               </div>
@@ -50,13 +62,17 @@ export default function Carton({ board, markedCardIds, onMark, isWinner }: Carto
                     alt="Bean marker"
                     width={40}
                     height={40}
-                    className="w-3/4 h-3/4 object-contain animate-in fade-in zoom-in-50 duration-500"
+                    className="w-2/3 h-2/3 object-contain animate-in fade-in zoom-in-50 duration-500"
                   />
                 </div>
               )}
             </div>
           );
         })}
+      </div>
+      <div className="flex flex-col items-center gap-1 pt-2">
+          <Progress value={progressValue} className="h-2 w-full bg-amber-800/20" />
+          <p className="text-xs text-muted-foreground">{markedCount} de 8 fichas marcadas</p>
       </div>
     </div>
   );
