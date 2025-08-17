@@ -43,7 +43,7 @@ const aiCallerFlow = ai.defineFlow(
           },
         },
       },
-      prompt: `Canta la carta de la lotería "${input.cardName}" con un verso o refrán tradicional y popular. Sé creativo y variado.`,
+      prompt: `¡${input.cardName}!`,
     });
     if (!media) {
       throw new Error('no media returned');
