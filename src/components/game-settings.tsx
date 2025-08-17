@@ -104,11 +104,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-center text-center">
-                <div className="flex-1 border-b-2 border-dashed border-primary/20"></div>
-                <h3 className="text-xl font-headline text-foreground/80 tracking-wide px-4">{t.gameRules}</h3>
-                <div className="flex-1 border-b-2 border-dashed border-primary/20"></div>
-              </div>
+              <div className="border-b-2 border-dashed border-primary/20 my-4"></div>
               <div className="space-y-3">
                 <Label className="text-3xl font-body font-bold tracking-wider -rotate-1">{t.winCondition}</Label>
                 <RadioGroup
@@ -149,11 +145,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             </div>
 
             <div className="space-y-4">
-              <div className="flex items-center text-center">
-                  <div className="flex-1 border-b-2 border-dashed border-primary/20"></div>
-                  <h3 className="text-xl font-headline text-foreground/80 tracking-wide px-4">{t.gameSetup}</h3>
-                  <div className="flex-1 border-b-2 border-dashed border-primary/20"></div>
-              </div>
+              <div className="border-b-2 border-dashed border-primary/20 my-4"></div>
               <div className="space-y-3">
                 <Label htmlFor="board-count" className="text-3xl font-body font-bold tracking-wider -rotate-1">{t.howManyCartons}</Label>
                 <Select
@@ -218,3 +210,5 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
     </TooltipProvider>
   );
 }
+
+    
