@@ -97,15 +97,15 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
     if (count <= 2) {
       return 'md:grid-cols-1';
     }
-    return 'md:grid-cols-2';
+    return 'grid-cols-1 md:grid-cols-2';
   };
   
-  const getCartonContainerClass = (index: number) => {
+  const getCartonContainerClass = () => {
     const count = settings.boardCount;
     if (count <= 2) {
-      return 'md:col-span-2';
+        return 'w-full max-w-[500px] justify-self-center';
     }
-    return '';
+    return 'w-full';
   };
 
 
@@ -134,7 +134,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         <div className="flex flex-col items-center justify-center gap-4 h-full">
           <div className={`flex-grow grid gap-8 content-center ${getGridClass()}`}>
             {boards.map((board, index) => (
-              <div key={index} className={`flex-shrink-0 ${getCartonContainerClass(index)}`}>
+              <div key={index} className={`flex-shrink-0 ${getCartonContainerClass()}`}>
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}

@@ -3,17 +3,18 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Amatic SC', cursive;
+  font-family: 'Caveat', cursive;
   background-image: url(https://www.transparenttextures.com/patterns/paper.png);
 }
 
 .kitchen-table-bg {
+  background-color: #6B4F3A; /* Dark brown color */
   background-image: url(https://www.transparenttextures.com/patterns/dark-wood.png);
 }
 
 @layer base {
   :root {
-    --background: 35 55% 88%;
+    --background: 30 25% 90%;
     --foreground: 25 76% 27%;
     --card: 35 55% 88%;
     --card-foreground: 25 76% 27%;
