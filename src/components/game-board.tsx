@@ -92,6 +92,23 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
     });
   }, [markedCardIds, boards, settings.winCondition, onWin]);
 
+  const getGridClass = () => {
+    const count = settings.boardCount;
+    if (count <= 2) {
+      return 'grid-cols-1';
+    }
+    return 'grid-cols-2';
+  };
+  
+  const getCartonClass = () => {
+    const count = settings.boardCount;
+    if (count === 1) {
+      return 'md:col-span-2';
+    }
+    return '';
+  };
+
+
   return (
     <div className="w-full h-screen flex flex-col items-center gap-2 p-4 kitchen-table-bg">
        <header className="w-full flex justify-between items-center px-4 relative h-20">
@@ -115,9 +132,9 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 h-full">
-          <div className="flex-grow grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 content-center">
+          <div className={`flex-grow grid md:grid-cols-2 gap-8 content-center ${getGridClass()}`}>
             {boards.map((board, index) => (
-              <div key={index} className="flex-shrink-0">
+              <div key={index} className={`flex-shrink-0 ${boards.length === 1 ? 'md:col-span-2' : boards.length === 3 && index === 2 ? 'md:col-span-2' : ''}`}>
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}
