@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect, useCallback, useMemo } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 import type { GameSettings, LoteriaCard } from '@/lib/types';
 import { generateBoards, createShuffledDeck, checkWin } from '@/lib/game-logic';
 import { Button } from '@/components/ui/button';
@@ -105,7 +105,6 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
             </Avatar>
             <h2 className="text-lg font-bold">{playerName}</h2>
         </div>
-        <h1 className="text-4xl font-bold font-headline text-amber-900/80 drop-shadow-sm absolute right-4">{t.appName}</h1>
       </header>
       
       <main className="w-full flex-1 grid grid-cols-[250px_1fr_250px] items-start justify-center gap-4">
@@ -130,7 +129,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
                   board={board}
                   markedCardIds={markedCardIds}
                   onMark={settings.autoMark ? undefined : handleMarkCard}
-                  isWinner={false} // This is handled by the win screen
+                  isWinner={false}
                 />
               </div>
             ))}
