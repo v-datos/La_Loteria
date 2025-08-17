@@ -21,7 +21,7 @@ export default function WinScreen({ winnerBoard, onPlayAgain }: WinScreenProps) 
           <CardTitle className="text-6xl font-headline text-primary drop-shadow-lg -rotate-3">{t.congratulations}</CardTitle>
         </CardHeader>
         <CardContent>
-          <p className="text-5xl font-body tracking-wider">
+          <p className="text-5xl font-body tracking-wider -rotate-1">
             {t.youWon} {winnerBoard}!
           </p>
         </CardContent>

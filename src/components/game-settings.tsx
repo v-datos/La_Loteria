@@ -63,7 +63,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             <LanguageToggle />
           </div>
           <h1 className="text-6xl font-headline text-amber-900/80 drop-shadow-sm -rotate-2">{t.appName}</h1>
-          <CardDescription className="text-4xl tracking-wider font-body">{t.subtitle}</CardDescription>
+          <CardDescription className="text-4xl tracking-wider font-body -rotate-1">{t.subtitle}</CardDescription>
         </CardHeader>
         <form onSubmit={handleSubmit}>
           <CardContent className="space-y-8 px-8">
@@ -77,7 +77,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                 </Avatar>
               </div>
               <div className="flex-grow space-y-2">
-                <Label htmlFor="name" className="text-3xl font-body tracking-wider">{t.yourName}</Label>
+                <Label htmlFor="name" className="text-3xl font-body tracking-wider -rotate-1">{t.yourName}</Label>
                 <Input
                   id="name"
                   value={playerName}
@@ -92,7 +92,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
             </div>
 
             <div className="space-y-3">
-              <Label className="text-3xl font-body tracking-wider">{t.winCondition}</Label>
+              <Label className="text-3xl font-body tracking-wider -rotate-1">{t.winCondition}</Label>
               <RadioGroup
                 value={settings.winCondition}
                 onValueChange={(value) => setSettings({ ...settings, winCondition: value as 'line' | 'full' | 'corners' })}
@@ -113,7 +113,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
               </RadioGroup>
             </div>
             <div className="space-y-3">
-              <Label htmlFor="board-count" className="text-3xl font-body tracking-wider">{t.howManyCartons}</Label>
+              <Label htmlFor="board-count" className="text-3xl font-body tracking-wider -rotate-1">{t.howManyCartons}</Label>
               <Select
                 value={String(settings.boardCount)}
                 onValueChange={(value) => setSettings({ ...settings, boardCount: Number(value) })}
@@ -131,7 +131,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
               </Select>
             </div>
             <div className="space-y-3">
-              <Label className="text-3xl font-body tracking-wider">{t.marking}</Label>
+              <Label className="text-3xl font-body tracking-wider -rotate-1">{t.marking}</Label>
               <div className="flex items-center justify-between rounded-xl border-2 border-primary/20 bg-muted/50 p-2 h-12">
                 <span className="px-2 text-2xl font-body tracking-wider">{t.manual}</span>
                 <Switch
