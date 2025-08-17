@@ -29,16 +29,9 @@ const winningPatterns = {
     // Rows
     [0, 1, 2, 3],
     [4, 5, 6, 7],
-    // Columns
-    [0, 4],
-    [1, 5],
-    [2, 6],
-    [3, 7],
-    // Diagonals
-    [0, 5],
-    [1, 4],
-    [2, 7],
-    [3, 6],
+  ],
+  corners: [
+    [0, 3, 4, 7]
   ],
   full: [Array.from({ length: 8 }, (_, i) => i)],
 };

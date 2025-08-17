@@ -8,7 +8,7 @@ export interface LoteriaCard {
   dataAiHint: string;
 }
 
-export type WinCondition = 'line' | 'full';
+export type WinCondition = 'line' | 'full' | 'corners';
 
 export interface GameSettings {
   winCondition: WinCondition;
@@ -24,6 +24,7 @@ export type Translations = {
     subtitle: string;
     line: string;
     fullBoard: string;
+    corners: string;
     winCondition: string;
     howManyCartons: string;
     marking: string;

@@ -95,12 +95,16 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
               <Label className="text-lg">{t.winCondition}</Label>
               <RadioGroup
                 value={settings.winCondition}
-                onValueChange={(value) => setSettings({ ...settings, winCondition: value as 'line' | 'full' })}
-                className="flex gap-4 p-3 bg-muted rounded-xl border border-primary/20"
+                onValueChange={(value) => setSettings({ ...settings, winCondition: value as 'line' | 'full' | 'corners' })}
+                className="grid grid-cols-3 gap-4 p-3 bg-muted rounded-xl border border-primary/20"
               >
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="line" id="line" />
                   <Label htmlFor="line">{t.line}</Label>
+                </div>
+                <div className="flex items-center space-x-2">
+                  <RadioGroupItem value="corners" id="corners" />
+                  <Label htmlFor="corners">{t.corners}</Label>
                 </div>
                 <div className="flex items-center space-x-2">
                   <RadioGroupItem value="full" id="full" />
