@@ -94,15 +94,15 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
 
   const getGridClass = () => {
     const count = settings.boardCount;
-    if (count <= 2) {
-      return 'grid-cols-1';
+    if (count > 2) {
+      return 'md:grid-cols-2';
     }
-    return 'grid-cols-2';
+    return 'md:grid-cols-1';
   };
   
-  const getCartonClass = () => {
+  const getCartonSpan = () => {
     const count = settings.boardCount;
-    if (count === 1) {
+    if (count <= 2) {
       return 'md:col-span-2';
     }
     return '';
@@ -132,9 +132,9 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         </div>
         
         <div className="flex flex-col items-center justify-center gap-4 h-full">
-          <div className={`flex-grow grid md:grid-cols-2 gap-8 content-center ${getGridClass()}`}>
+          <div className={`flex-grow grid gap-8 content-center ${getGridClass()}`}>
             {boards.map((board, index) => (
-              <div key={index} className={`flex-shrink-0 ${boards.length === 1 ? 'md:col-span-2' : boards.length === 3 && index === 2 ? 'md:col-span-2' : ''}`}>
+              <div key={index} className={`flex-shrink-0 ${getCartonSpan()}`}>
                 <Carton
                   board={board}
                   markedCardIds={markedCardIds}
