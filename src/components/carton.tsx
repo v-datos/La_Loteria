@@ -14,8 +14,7 @@ interface CartonProps {
 
 export default function Carton({ board, markedCardIds, onMark, isWinner, boardNumber }: CartonProps) {
   const { t, language } = useGame();
-  const markedCount = board.filter(card => markedCardIds.has(card.id)).length;
-
+  
   return (
     <div
       className={`p-4 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-transparent'}`}
@@ -61,12 +60,6 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
             </div>
           );
         })}
-      </div>
-      <div className="flex justify-center items-center gap-2 pt-2">
-            <span className="flex items-center justify-center bg-primary text-primary-foreground font-bold rounded-full h-6 w-6 text-sm">
-                {markedCount}
-            </span>
-            <span className="text-sm text-muted-foreground pr-1">{t.marked}</span>
       </div>
     </div>
   );
