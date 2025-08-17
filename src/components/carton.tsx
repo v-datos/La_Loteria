@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import type { LoteriaCard } from '@/lib/types';
 import { useGame } from '@/contexts/game-context';
-import { Progress } from './ui/progress';
 
 interface CartonProps {
   board: LoteriaCard[];
@@ -16,7 +15,6 @@ interface CartonProps {
 export default function Carton({ board, markedCardIds, onMark, isWinner, boardNumber }: CartonProps) {
   const { t, language } = useGame();
   const markedCount = board.filter(card => markedCardIds.has(card.id)).length;
-  const progressValue = (markedCount / 8) * 100;
 
   return (
     <div
@@ -24,12 +22,6 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
     >
         <div className="flex justify-between items-center px-1">
             <h3 className="font-bold text-lg">{t.carton} {boardNumber}</h3>
-            <div className="flex items-center gap-2">
-            <span className="flex items-center justify-center bg-primary text-primary-foreground font-bold rounded-full h-6 w-6 text-sm">
-                {markedCount}
-            </span>
-            <span className="text-sm text-muted-foreground pr-1">{t.marked}</span>
-            </div>
         </div>
 
       <div className="grid grid-cols-4 grid-rows-2 gap-2">
@@ -70,8 +62,11 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
           );
         })}
       </div>
-      <div className="flex flex-col items-center gap-1 pt-2">
-          <Progress value={progressValue} className="h-2 w-full bg-amber-800/20" />
+      <div className="flex justify-center items-center gap-2 pt-2">
+            <span className="flex items-center justify-center bg-primary text-primary-foreground font-bold rounded-full h-6 w-6 text-sm">
+                {markedCount}
+            </span>
+            <span className="text-sm text-muted-foreground pr-1">{t.marked}</span>
       </div>
     </div>
   );
