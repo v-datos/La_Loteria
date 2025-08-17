@@ -17,10 +17,10 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
   
   return (
     <div
-      className={`p-4 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-transparent'}`}
+      className={`p-2 bg-card/90 rounded-2xl shadow-lg border-2 backdrop-blur-sm transition-all duration-500 w-full flex flex-col gap-2 ${isWinner ? 'shadow-yellow-400/80 scale-105 border-primary' : 'shadow-black/20 border-transparent'}`}
     >
         <div className="flex justify-between items-center px-1">
-            <h3 className="font-bold text-lg">{t.carton} {boardNumber}</h3>
+            <h3 className="font-headline text-2xl -rotate-2">{t.carton} {boardNumber}</h3>
         </div>
 
       <div className="grid grid-cols-4 grid-rows-2 gap-2">
@@ -42,7 +42,7 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
                 priority
               />
                <div className="absolute bottom-0 left-0 right-0 bg-black/50 p-0.5 text-center">
-                <p className="text-white text-[10px] font-semibold truncate">
+                <p className="text-white text-xs font-semibold truncate transform -rotate-1">
                   {language === 'es' ? card.name.es : card.name.en}
                 </p>
               </div>

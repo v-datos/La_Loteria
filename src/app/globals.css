@@ -3,7 +3,8 @@
 @tailwind utilities;
 
 body {
-  font-family: 'Literata', serif;
+  font-family: 'Caveat', cursive;
+  background-image: url(https://www.transparenttextures.com/patterns/paper.png);
 }
 
 @layer base {

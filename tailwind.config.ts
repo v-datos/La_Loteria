@@ -17,8 +17,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Literata', 'serif'],
-        headline: ['Literata', 'serif'],
+        body: ['Caveat', 'cursive'],
+        headline: ['Luckiest Guy', 'cursive'],
         code: ['monospace'],
       },
       colors: {
