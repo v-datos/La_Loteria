@@ -25,7 +25,7 @@ export default function CalledCards({ cards, deckSize }: CalledCardsProps) {
       </CardHeader>
       <CardContent className="flex-1 p-2 overflow-hidden">
         <ScrollArea className="h-full">
-            <div className="grid grid-cols-3 gap-1 p-2">
+            <div className="grid grid-cols-4 gap-1 p-2">
                 {[...cards].reverse().map((card) => (
                     <div key={card.id} className="aspect-[3/4] rounded-sm overflow-hidden border border-amber-800/20">
                     <Image

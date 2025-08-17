@@ -36,7 +36,7 @@ export const translations: Translations = {
     appName: 'Lotería',
     subtitle: 'de Tía Luisa',
     line: 'Línea',
-    fullBoard: 'Tabla Llena',
+    fullBoard: 'Carton Lleno',
     winCondition: 'Condición para Ganar',
     howManyCartons: '¿Cuántos cartones?',
     marking: 'Marcado',

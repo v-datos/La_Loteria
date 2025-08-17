@@ -81,7 +81,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                   id="name"
                   value={playerName}
                   onChange={(e) => setPlayerName(e.target.value)}
-                  placeholder="e.g., Juan"
+                  placeholder="e.g., Luisa"
                 />
               </div>
               <Button onClick={handleGenerateAvatar} disabled={!playerName || isGenerating} type="button">
