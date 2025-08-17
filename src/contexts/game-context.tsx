@@ -1,13 +1,14 @@
+
 'use client';
 
 import React, { createContext, useContext, useState, ReactNode } from 'react';
-import type { Language } from '@/lib/types';
+import type { Language, TranslationSet } from '@/lib/types';
 import { translations } from '@/lib/translations';
 
 interface GameContextProps {
   language: Language;
   setLanguage: (language: Language) => void;
-  t: (typeof translations)[Language];
+  t: TranslationSet;
   playerName: string;
   setPlayerName: (name: string) => void;
   avatarUrl: string;
@@ -41,3 +42,5 @@ export const useGame = () => {
   }
   return context;
 };
+
+    

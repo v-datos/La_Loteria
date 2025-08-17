@@ -1,3 +1,4 @@
+
 export interface LoteriaCard {
   id: number;
   name: {
@@ -16,10 +17,9 @@ export interface GameSettings {
   autoMark: boolean;
 }
 
-export type Language = 'en' | 'es';
+export type Language = 'en' | 'es' | 'fr' | 'pt';
 
-export type Translations = {
-  [key in Language]: {
+export type TranslationSet = {
     appName: string;
     subtitle: string;
     line: string;
@@ -50,5 +50,16 @@ export type Translations = {
     of: string;
     calledCard: string;
     marked: string;
-  };
+    enterNameToPlay: string;
+    gameRules: string;
+    gameSetup: string;
+    manualMarkingTooltip: string;
+    automaticMarkingTooltip: string;
 };
+
+
+export type Translations = {
+  [key in Language]: TranslationSet;
+};
+
+    
