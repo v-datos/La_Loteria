@@ -1,3 +1,4 @@
+
 import type {Config} from 'tailwindcss';
 
 export default {
@@ -95,13 +96,9 @@ export default {
             height: '0',
           },
         },
-        'card-flip': {
-          '0%': { transform: 'rotateY(0deg)' },
-          '100%': { transform: 'rotateY(180deg)' },
-        },
-        'card-reveal': {
-          '0%': { transform: 'rotateY(-180deg) scale(0.8)', opacity: '0' },
-          '100%': { transform: 'rotateY(0deg) scale(1)', opacity: '1' },
+        'card-fade-in': {
+          '0%': { opacity: '0' },
+          '100%': { opacity: '1' },
         },
         'confetti-fall': {
           '0%': { transform: 'translateY(-100vh) rotateZ(0deg)' },
@@ -111,8 +108,7 @@ export default {
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
-        'card-flip': 'card-flip 0.6s ease-in-out forwards',
-        'card-reveal': 'card-reveal 0.6s ease-in-out forwards',
+        'card-fade-in': 'card-fade-in 0.5s ease-in-out forwards',
         'confetti-fall': 'confetti-fall linear forwards',
       },
     },
