@@ -17,7 +17,7 @@ export default {
     },
     extend: {
       fontFamily: {
-        body: ['Caveat', 'cursive'],
+        body: ['Sevillana', 'cursive'],
         headline: ['Luckiest Guy', 'cursive'],
         code: ['monospace'],
       },
