@@ -103,7 +103,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
   const getCartonContainerClass = () => {
     const count = settings.boardCount;
     if (count <= 2) {
-        return 'w-full max-w-[500px] justify-self-center';
+        return 'w-full max-w-[1000px] justify-self-center';
     }
     return 'w-full';
   };
@@ -122,7 +122,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
                 <User className="h-8 w-8" />
               </AvatarFallback>
             </Avatar>
-            <h2 className="text-2xl font-bold font-body tracking-wider">{playerName}</h2>
+            <h2 className="text-2xl font-bold font-body tracking-wider text-background">{playerName}</h2>
         </div>
       </header>
       
@@ -149,7 +149,7 @@ export default function GameBoard({ settings, onWin, onRestart }: GameBoardProps
         
         <div className="flex flex-col items-center justify-start gap-4 h-full">
             <div className='flex flex-col items-center gap-2'>
-              <h3 className='text-3xl font-body tracking-wider font-bold -rotate-2'>{t.calledCard}</h3>
+              <h3 className='text-3xl font-body tracking-wider font-bold -rotate-2 text-background'>{t.calledCard}</h3>
               <CallerCard card={currentCard} />
             </div>
             <Button onClick={handleNextCard} disabled={isCalling || deck.length === 0} className="w-full max-w-xs h-12 text-2xl font-body tracking-wider px-4">
