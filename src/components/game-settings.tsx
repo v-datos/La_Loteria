@@ -1,3 +1,4 @@
+
 'use client';
 
 import { useState } from 'react';
@@ -81,7 +82,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                   id="name"
                   value={playerName}
                   onChange={(e) => setPlayerName(e.target.value)}
-                  placeholder="e.g., Luisa"
+                  placeholder={t.language === 'es' ? 'ej., Luisa' : 'e.g., Luisa'}
                 />
               </div>
               <Button onClick={handleGenerateAvatar} disabled={!playerName || isGenerating} type="button">
@@ -112,7 +113,7 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                 value={String(settings.boardCount)}
                 onValueChange={(value) => setSettings({ ...settings, boardCount: Number(value) })}
               >
-                <SelectTrigger id="board-count">
+                <SelectTrigger id="board-count" className="h-12 rounded-xl border-2 border-primary text-base">
                   <SelectValue placeholder="Select number of boards" />
                 </SelectTrigger>
                 <SelectContent>
@@ -124,15 +125,15 @@ export default function GameSettingsComponent({ onStartGame }: GameSettingsProps
                 </SelectContent>
               </Select>
             </div>
-            <div className="flex items-center justify-between">
+            <div className="space-y-2">
               <Label className="text-lg">{t.marking}</Label>
-              <div className="flex items-center gap-4">
-                <span>{t.manual}</span>
+              <div className="flex items-center justify-between rounded-xl border-2 border-primary p-2 h-12">
+                <span className="px-2">{t.manual}</span>
                 <Switch
                   checked={settings.autoMark}
                   onCheckedChange={(checked) => setSettings({ ...settings, autoMark: checked })}
                 />
-                <span>{t.automatic}</span>
+                <span className="px-2">{t.automatic}</span>
               </div>
             </div>
           </CardContent>
