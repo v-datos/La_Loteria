@@ -72,7 +72,6 @@ export default function Carton({ board, markedCardIds, onMark, isWinner, boardNu
       </div>
       <div className="flex flex-col items-center gap-1 pt-2">
           <Progress value={progressValue} className="h-2 w-full bg-amber-800/20" />
-          <p className="text-xs text-muted-foreground">{markedCount} de 8 fichas marcadas</p>
       </div>
     </div>
   );
