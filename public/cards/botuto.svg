@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">11</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30 140 Q20 70 90 40 Q160 20 175 70 Q185 110 150 140 Q110 175 30 140 Z" fill="#f5a3b5"/>
+    <path d="M30 140 L10 170 L50 155 Z" fill="#fdf2e3"/>
+    <path d="M90 40 Q120 70 150 140 M60 55 Q95 95 110 155 M130 30 Q150 70 172 85" fill="none" stroke-width="3"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">BOTUTO</text>
+</svg>

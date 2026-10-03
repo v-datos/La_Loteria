@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">13</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M15 175 Q15 150 50 150 L170 150 Q190 150 185 175 Z" fill="#d2a26b"/>
+    <path d="M170 150 Q175 120 160 110 M180 152 Q192 120 182 105" fill="none"/>
+    <circle cx="160" cy="108" r="5" fill="#2b1d14"/><circle cx="182" cy="103" r="5" fill="#2b1d14"/>
+    <circle cx="90" cy="105" r="58" fill="#e67e22"/>
+    <path d="M90 105 m0 -10 a10 10 0 1 1 -10 10 a20 20 0 1 1 20 20 a32 32 0 1 1 -32 -32 a46 46 0 1 1 46 46" fill="none" stroke-width="5"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">CARACOL</text>
+</svg>

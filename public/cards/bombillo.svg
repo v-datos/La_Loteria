@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">34</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 15 Q45 15 45 75 Q45 105 75 130 L75 150 L125 150 L125 130 Q155 105 155 75 Q155 15 100 15 Z" fill="#f4c430"/>
+    <rect x="75" y="150" width="50" height="35" rx="4" fill="#cfd8dc"/>
+    <path d="M75 162 L125 162 M75 174 L125 174" fill="none" stroke-width="3"/>
+    <path d="M85 125 L85 95 L95 80 L105 95 L115 80 L115 125" fill="none" stroke="#e67e22" stroke-width="3"/>
+    <path d="M15 60 L30 65 M185 60 L170 65 M30 15 L42 28 M170 15 L158 28" fill="none" stroke="#e67e22" stroke-width="5"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">BOMBILLO</text>
+</svg>

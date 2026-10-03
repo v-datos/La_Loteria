@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">80</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M20 160 L20 70 Q40 60 65 70 Q80 110 120 115 Q185 120 190 160 Z" fill="#8b4513"/>
+    <rect x="15" y="158" width="180" height="16" rx="5" fill="#2c2c2c"/>
+    <path d="M60 85 L90 80 M68 98 L100 93 M78 110 L108 105" fill="none" stroke="#fdf2e3" stroke-width="4"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">ZAPATO</text>
+</svg>

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">29</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="85" cy="110" rx="45" ry="28" fill="#ffffff"/>
+    <path d="M115 100 Q140 80 125 50 Q115 25 140 20" fill="none" stroke="#ffffff" stroke-width="16"/>
+    <path d="M115 100 Q140 80 125 50 Q115 25 140 20" fill="none" stroke-width="2"/>
+    <circle cx="142" cy="20" r="12" fill="#ffffff"/>
+    <path d="M152 18 L195 25 L152 26 Z" fill="#f4c430"/>
+    <circle cx="144" cy="17" r="3" fill="#2b1d14"/>
+    <path d="M80 135 L75 195 M95 135 L105 195" fill="none" stroke="#2b1d14" stroke-width="4"/>
+    <path d="M40 110 L10 125 L45 120 Z" fill="#ffffff"/>
+    <path d="M30 190 Q100 180 180 190" fill="none" stroke="#2e86c1" stroke-width="6"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">GARZA</text>
+</svg>

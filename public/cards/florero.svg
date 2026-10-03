@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">27</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M70 110 Q40 140 60 190 L140 190 Q160 140 130 110 L120 95 L80 95 Z" fill="#2e86c1"/>
+    <path d="M60 150 L140 150" fill="none" stroke="#f4c430" stroke-width="6"/>
+    <path d="M95 95 L80 50 M100 95 L100 40 M105 95 L125 50" fill="none" stroke="#2e8b57" stroke-width="5"/>
+    <circle cx="78" cy="42" r="14" fill="#e91e63"/><circle cx="100" cy="30" r="14" fill="#f4c430"/><circle cx="127" cy="42" r="14" fill="#c0392b"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">FLORERO</text>
+</svg>

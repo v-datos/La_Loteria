@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">67</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M30 70 L150 70 L140 160 Q90 180 40 160 Z" fill="#ffffff"/>
+    <path d="M148 90 Q190 90 185 120 Q180 145 142 140" fill="none" stroke-width="12" stroke="#2b1d14"/>
+    <path d="M148 90 Q190 90 185 120 Q180 145 142 140" fill="none" stroke-width="6" stroke="#ffffff"/>
+    <ellipse cx="90" cy="70" rx="60" ry="12" fill="#8b4513"/>
+    <ellipse cx="90" cy="180" rx="80" ry="12" fill="#2e86c1"/>
+    <path d="M45 115 L135 115" fill="none" stroke="#2e86c1" stroke-width="7"/>
+    <path d="M70 50 Q60 35 75 20 M105 50 Q95 35 110 20" fill="none" stroke="#95a5a6" stroke-width="4"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">TASA</text>
+</svg>

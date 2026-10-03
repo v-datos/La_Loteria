@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">8</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M10 175 Q55 160 100 175 T190 175" fill="none" stroke="#2e86c1" stroke-width="8"/>
+    <path d="M20 130 L180 130 L155 168 L45 168 Z" fill="#8b4513"/>
+    <rect x="96" y="25" width="8" height="105" fill="#2b1d14"/>
+    <path d="M108 30 L108 120 L170 120 Z" fill="#ffffff"/>
+    <path d="M92 40 L92 120 L40 120 Z" fill="#fdf2e3"/>
+    <path d="M104 25 L135 15 L104 5 Z" fill="#c0392b"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">BARCO</text>
+</svg>

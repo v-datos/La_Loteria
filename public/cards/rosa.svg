@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">62</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 95 Q95 150 100 195" fill="none" stroke="#2e8b57" stroke-width="7"/>
+    <path d="M100 150 Q70 130 55 145 Q75 165 100 150 Z M100 170 Q130 150 145 165 Q125 185 100 170 Z" fill="#2e8b57"/>
+    <circle cx="100" cy="65" r="48" fill="#c0392b"/>
+    <path d="M100 65 m0 -8 a8 8 0 1 1 -8 8 a16 16 0 1 1 16 16 a26 26 0 1 1 -26 -26 a36 36 0 1 1 36 36" fill="none" stroke="#8e1b10" stroke-width="4"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">ROSA</text>
+</svg>

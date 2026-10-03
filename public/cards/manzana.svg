@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">42</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 55 Q60 30 35 70 Q15 120 50 170 Q75 200 100 185 Q125 200 150 170 Q185 120 165 70 Q140 30 100 55 Z" fill="#c0392b"/>
+    <path d="M100 55 Q98 35 108 18" fill="none" stroke="#8b4513" stroke-width="7"/>
+    <path d="M108 35 Q135 15 160 30 Q135 50 108 35 Z" fill="#2e8b57"/>
+    <path d="M55 80 Q45 100 50 120" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.7"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">MANZANA</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">41</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M55 190 L55 110 L30 80 Q22 68 35 62 L65 90 L65 30 Q65 18 77 18 Q88 18 88 30 L88 80 L90 15 Q90 3 102 3 Q114 3 114 15 L113 80 L118 25 Q120 13 132 15 Q143 18 141 30 L136 85 L145 50 Q148 40 158 43 Q168 47 164 58 L150 125 Q145 160 135 190 Z" fill="#e8b48a"/>
+    <path d="M60 175 L140 175" fill="none" stroke="#c0392b" stroke-width="8"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">MANO</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">68</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="100" cy="125" rx="65" ry="58" fill="#2e86c1"/>
+    <path d="M38 115 Q5 100 10 60 L25 60 Q30 95 45 100 Z" fill="#2e86c1"/>
+    <path d="M160 100 Q200 100 195 140 Q190 175 155 160" fill="none" stroke="#1b4f72" stroke-width="10"/>
+    <path d="M60 72 Q100 55 140 72 Z" fill="#1b4f72"/>
+    <circle cx="100" cy="55" r="10" fill="#1b4f72"/>
+    <path d="M45 130 L155 130" fill="none" stroke="#ffffff" stroke-width="6"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">TETERA</text>
+</svg>

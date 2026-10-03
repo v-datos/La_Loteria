@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">37</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 50 Q60 30 15 40 L15 165 Q60 155 100 175 Z" fill="#ffffff"/>
+    <path d="M100 50 Q140 30 185 40 L185 165 Q140 155 100 175 Z" fill="#fdf2e3"/>
+    <path d="M10 45 L10 175 Q60 165 100 185 Q140 165 190 175 L190 45" fill="none" stroke="#c0392b" stroke-width="7"/>
+    <path d="M30 70 L85 78 M30 90 L85 98 M30 110 L85 118 M115 78 L170 70 M115 98 L170 90 M115 118 L170 110" fill="none" stroke-width="3"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">LIBRO</text>
+</svg>

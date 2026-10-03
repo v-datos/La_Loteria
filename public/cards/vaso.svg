@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">77</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M45 20 L155 20 L140 190 L60 190 Z" fill="#aed6f1" opacity="0.9"/>
+    <path d="M52 80 L148 80 L140 190 L60 190 Z" fill="#e67e22"/>
+    <path d="M68 35 L78 175" fill="none" stroke="#ffffff" stroke-width="6"/>
+    <path d="M120 0 L105 120" fill="none" stroke="#c0392b" stroke-width="7"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">VASO</text>
+</svg>
