@@ -84,3 +84,20 @@ body {
     @apply bg-background text-foreground;
   }
 }
+
+/* 3D flip utilities used by the called card (caller-card.tsx) */
+@layer utilities {
+  .perspective-1000 {
+    perspective: 1000px;
+  }
+  .preserve-3d {
+    transform-style: preserve-3d;
+  }
+  .rotate-y-180 {
+    transform: rotateY(180deg);
+  }
+  .backface-hidden {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+  }
+}
