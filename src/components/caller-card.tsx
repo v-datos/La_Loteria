@@ -59,10 +59,3 @@ export default function CallerCard({ card }: CallerCardProps) {
     </div>
   );
 }
-
-// Add these to globals.css or a relevant stylesheet if they don't exist
-// .perspective-1000 { perspective: 1000px; }
-// .preserve-3d { transform-style: preserve-3d; }
-// .rotate-y-180 { transform: rotateY(180deg); }
-// .backface-hidden { backface-visibility: hidden; }
-    
