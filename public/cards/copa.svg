@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">18</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M45 25 L155 25 Q155 100 100 115 Q45 100 45 25 Z" fill="#f4c430"/>
+    <rect x="93" y="112" width="14" height="50" fill="#f4c430"/>
+    <path d="M60 185 Q60 160 100 160 Q140 160 140 185 Z" fill="#f4c430"/>
+    <path d="M52 40 L148 40" fill="none" stroke="#c0392b" stroke-width="8"/>
+    <circle cx="100" cy="75" r="10" fill="#c0392b"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">COPA</text>
+</svg>

@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">48</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M70 180 Q40 180 50 140 Q30 110 40 60 Q55 15 105 15 Q160 15 165 70 Q170 110 135 135 Q115 150 115 170 Q110 195 70 180 Z" fill="#e8b48a"/>
+    <path d="M75 140 Q65 100 75 70 Q90 45 115 50 Q140 58 138 85 Q135 105 115 110 Q100 112 98 128" fill="none" stroke-width="5"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">OREJA</text>
+</svg>

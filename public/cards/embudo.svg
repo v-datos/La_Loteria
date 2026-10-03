@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">22</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M25 30 L175 30 L112 120 L112 190 L88 190 L88 120 Z" fill="#cfd8dc"/>
+    <ellipse cx="100" cy="30" rx="75" ry="14" fill="#95a5a6"/>
+    <path d="M150 50 Q190 60 185 90" fill="none" stroke-width="6"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">EMBUDO</text>
+</svg>

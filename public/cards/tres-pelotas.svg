@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">72</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <circle cx="100" cy="55" r="42" fill="#c0392b"/>
+    <circle cx="55" cy="140" r="42" fill="#2e86c1"/>
+    <circle cx="145" cy="140" r="42" fill="#f4c430"/>
+    <g fill="none" stroke="#ffffff" stroke-width="5"><path d="M80 35 Q90 25 102 25"/><path d="M35 120 Q45 110 57 110"/><path d="M125 120 Q135 110 147 110"/></g>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="26" font-weight="bold" fill="#ffffff">TRES PELOTAS</text>
+</svg>

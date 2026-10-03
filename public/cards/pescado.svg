@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">55</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M20 100 Q80 30 150 100 Q80 170 20 100 Z" fill="#2e86c1"/>
+    <path d="M145 100 L190 60 L180 100 L190 140 Z" fill="#2e86c1"/>
+    <circle cx="50" cy="90" r="7" fill="#ffffff"/><circle cx="50" cy="90" r="3" fill="#2b1d14"/>
+    <path d="M75 70 Q90 100 75 130 M95 70 Q110 100 95 130 M115 75 Q128 100 115 125" fill="none" stroke="#aed6f1" stroke-width="4"/>
+    <path d="M70 62 Q95 35 120 70" fill="#1b4f72"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">PESCADO</text>
+</svg>

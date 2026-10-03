@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">53</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="15" y="60" width="170" height="35" rx="8" fill="#e91e63"/>
+    <g fill="#e91e63"><rect x="22" y="92" width="7" height="70" rx="3"/><rect x="33.5" y="92" width="7" height="60" rx="3"/><rect x="45" y="92" width="7" height="70" rx="3"/><rect x="56.5" y="92" width="7" height="60" rx="3"/><rect x="68" y="92" width="7" height="70" rx="3"/><rect x="79.5" y="92" width="7" height="60" rx="3"/><rect x="91" y="92" width="7" height="70" rx="3"/><rect x="102.5" y="92" width="7" height="60" rx="3"/><rect x="114" y="92" width="7" height="70" rx="3"/><rect x="125.5" y="92" width="7" height="60" rx="3"/><rect x="137" y="92" width="7" height="70" rx="3"/><rect x="148.5" y="92" width="7" height="60" rx="3"/><rect x="160" y="92" width="7" height="70" rx="3"/><rect x="171.5" y="92" width="7" height="60" rx="3"/></g>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">PEINE</text>
+</svg>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">15</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M100 30 Q45 90 50 135 Q55 185 100 185 Q145 185 150 135 Q155 90 100 30 Z" fill="#7d3c98"/>
+    <path d="M100 32 Q75 100 85 182 M100 32 Q125 100 115 182" fill="none" stroke="#f5a3b5" stroke-width="4"/>
+    <path d="M100 30 Q95 10 85 5 M100 30 Q105 10 118 6" fill="none" stroke="#2e8b57" stroke-width="6"/>
+    <path d="M85 185 L80 197 M100 185 L100 198 M115 185 L120 197" fill="none" stroke-width="3"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">CEBOLLA</text>
+</svg>

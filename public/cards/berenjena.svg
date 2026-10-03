@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">78</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M85 45 Q40 70 35 130 Q35 190 95 190 Q165 185 165 125 Q160 80 120 50 Z" fill="#7d3c98"/>
+    <path d="M80 50 Q100 20 125 50 Q115 65 100 55 Q90 65 80 50 Z" fill="#2e8b57"/>
+    <path d="M102 30 Q100 10 112 2" fill="none" stroke="#2e8b57" stroke-width="7"/>
+    <path d="M60 110 Q55 140 70 165" fill="none" stroke="#ffffff" stroke-width="6" opacity="0.6"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">BERENJENA</text>
+</svg>

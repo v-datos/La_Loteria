@@ -91,9 +91,19 @@ const uniqueFichas = fichas.reduce((acc, current) => {
   return acc;
 }, [] as typeof fichas);
 
+// Matches cardSlug() in scripts/generate-card-art.mjs, which writes public/cards/<slug>.svg.
+export function cardSlug(name: string): string {
+  return name
+    .normalize('NFD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, '-')
+    .replace(/^-|-$/g, '');
+}
+
 export const LOTERIA_CARDS: LoteriaCard[] = uniqueFichas.slice(0, 80).map((ficha, index) => ({
   id: index + 1,
   name: { en: ficha.en, es: ficha.es },
-  image: `https://placehold.co/200x300.png?text=${ficha.es.replace(/\s/g, '+')}`,
+  image: `/cards/${cardSlug(ficha.es)}.svg`,
   dataAiHint: ficha.hint,
 }));

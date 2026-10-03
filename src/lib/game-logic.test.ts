@@ -1,3 +1,5 @@
+import { existsSync } from 'node:fs';
+import { join } from 'node:path';
 import { describe, expect, it } from 'vitest';
 import { checkWin, createShuffledDeck, generateBoards } from './game-logic';
 import { LOTERIA_CARDS } from './loteria-cards';
@@ -18,6 +20,11 @@ describe('LOTERIA_CARDS', () => {
 
   it('has enough fichas to fill a carton', () => {
     expect(LOTERIA_CARDS.length).toBeGreaterThanOrEqual(8);
+  });
+
+  it('points every card at a bundled artwork file', () => {
+    const missing = LOTERIA_CARDS.filter(card => !existsSync(join(process.cwd(), 'public', card.image)));
+    expect(missing.map(card => card.image)).toEqual([]);
   });
 });
 

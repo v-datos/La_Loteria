@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">24</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <rect x="94" y="5" width="12" height="120" rx="5" fill="#8b4513" />
+    <path d="M85 120 L115 120 L155 190 L45 190 Z" fill="#f4c430"/>
+    <path d="M80 135 L120 135" fill="none" stroke="#c0392b" stroke-width="7"/>
+    <path d="M70 150 L58 188 M85 150 L80 188 M100 150 L100 188 M115 150 L120 188 M130 150 L142 188" fill="none" stroke-width="2"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">ESCOBA</text>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">20</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M40 70 L110 40 L170 70 L100 100 Z" fill="#ffffff"/>
+    <path d="M40 70 L100 100 L100 180 L40 150 Z" fill="#fdf2e3"/>
+    <path d="M100 100 L170 70 L170 150 L100 180 Z" fill="#cfd8dc"/>
+    <g fill="#c0392b" stroke="none"><ellipse cx="105" cy="70" rx="9" ry="5"/>
+    <circle cx="57" cy="100" r="6"/><circle cx="83" cy="150" r="6"/>
+    <circle cx="118" cy="105" r="6"/><circle cx="152" cy="92" r="6"/><circle cx="118" cy="150" r="6"/><circle cx="152" cy="137" r="6"/></g>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">DADO</text>
+</svg>

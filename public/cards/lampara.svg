@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">35</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <path d="M60 20 L140 20 L170 95 L30 95 Z" fill="#f4c430"/>
+    <rect x="94" y="95" width="12" height="70" fill="#8b4513"/>
+    <path d="M55 190 Q55 165 100 165 Q145 165 145 190 Z" fill="#8b4513"/>
+    <path d="M30 95 L170 95" fill="none" stroke="#c0392b" stroke-width="6"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">LAMPARA</text>
+</svg>

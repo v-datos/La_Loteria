@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="300" height="400" viewBox="0 0 300 400">
+<rect width="300" height="400" rx="14" fill="#fdf2e3"/>
+<rect x="10" y="10" width="280" height="380" rx="8" fill="none" stroke="#d2691e" stroke-width="6"/>
+<text x="26" y="52" font-family="Georgia, 'Times New Roman', serif" font-size="34" font-weight="bold" fill="#2b1d14">49</text>
+<g transform="translate(50 70)" stroke="#2b1d14" stroke-width="4" stroke-linejoin="round" stroke-linecap="round">
+    <ellipse cx="95" cy="110" rx="60" ry="42" fill="#2e86c1"/>
+    <circle cx="145" cy="75" r="28" fill="#2e86c1"/>
+    <path d="M170 70 L195 80 L170 88 Z" fill="#e67e22"/>
+    <circle cx="152" cy="70" r="5" fill="#2b1d14"/>
+    <path d="M60 100 Q100 70 120 115 Q90 140 60 100 Z" fill="#1b4f72"/>
+    <path d="M40 115 L5 95 L15 130 Z" fill="#1b4f72"/>
+    <ellipse cx="110" cy="130" rx="25" ry="12" fill="#f4c430" stroke="none"/>
+    <path d="M85 150 L80 180 M105 150 L110 180 M20 180 L180 180" fill="none" stroke="#8b4513" stroke-width="5"/>
+</g>
+<rect x="24" y="310" width="252" height="62" rx="6" fill="#d2691e"/>
+<text x="150" y="352" text-anchor="middle" font-family="Georgia, 'Times New Roman', serif" font-size="32" font-weight="bold" fill="#ffffff">PÁJARO</text>
+</svg>
